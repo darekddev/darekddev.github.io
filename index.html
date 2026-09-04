@@ -37,11 +37,11 @@
 <!-- <meta name="google-site-verification" content="TU_WKLEJ_KOD"> -->
 <!-- ================================================== -->
 
-<title>AirFry — air fryer recipes and a timer that says when to turn</title>
+<title>AirFry: Air Fryer Companion</title>
 <meta name="description" content="AirFry: 100+ air fryer recipes with temperature and time, and a timer that tells you when to turn the food. Works offline, no account.">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="AirFry — air fryer recipes and timer">
+<meta property="og:title" content="AirFry: Air Fryer Companion">
 <meta property="og:description" content="100+ recipes with temperature and time. A timer that says when to turn. Works offline.">
 <meta property="og:image" content="img/icon-512.png">
 
@@ -98,9 +98,15 @@
   }
 
   .brand h1 {
+    /* Człon po dwukropku lżejszy: to podtytuł ze sklepu, nie marka. */
     margin: 0;
     font-size: 34px;
     letter-spacing: -0.02em;
+  }
+
+  .brand h1 span {
+    font-weight: 400;
+    color: var(--muted);
   }
 
   .brand p {
@@ -262,8 +268,15 @@
   <header>
     <div class="brand">
       <img src="img/icon-512.png" alt="AirFry app icon">
+      <!--
+        Pełna nazwa ze sklepu, nie skrócona. Pod ikoną na telefonie stoi samo
+        „AirFry" (`app_name` w res/values/strings.xml), bo launcher ucina
+        etykietę po kilkunastu znakach — ale strona ma się zgadzać z WPISEM
+        W SKLEPIE, bo to jego recenzent porównuje z witryną. Tak samo robi
+        Google: w sklepie „Google Chrome: Fast & Secure", pod ikoną „Chrome".
+      -->
       <div>
-        <h1>AirFry</h1>
+        <h1>AirFry<span>: Air Fryer Companion</span></h1>
         <p>Air fryer recipes and timer</p>
       </div>
     </div>
@@ -369,19 +382,20 @@
 
   <footer id="contact">
     <!--
-      Nazwa firmy i e-mail: zostaw. Google nie wymaga ich NA STRONIE, ale
-      recenzent porównuje ją z kontem w Play Console, a strona bez wydawcy
-      wygląda jak strona-wydmuszka. Te dane i tak stają się publiczne:
-      Play pokazuje nazwę wydawcy (a przy koncie firmowym również adres)
-      w sekcji kontaktowej samego wpisu w sklepie.
+      Adresu siedziby tu NIE MA i nie musi być. Weryfikacja witryny w Search
+      Console sprawdza wyłącznie, czy panujesz nad domeną (tag w <head>), a
+      dane firmy Google bierze z Play Console, nie stąd.
 
-      Adres siedziby: opcjonalny. Jeśli nie chcesz go tu podawać, usuń wiersz
-      [ADRES SIEDZIBY] — witryna zostanie zweryfikowana tak samo.
+      Zostają nazwa i e-mail: recenzent porównuje nazwę z kontem w Play
+      Console, a e-mail jest jedynym kanałem kontaktu poza sklepem.
+
+      Gdybyś kiedyś chciał dopisać adres — na przykład przy sprzedaży poza
+      Google Play, gdzie sprzedawcą przestaje być Google — wstaw wiersz
+      między nazwę a kontakt.
     -->
     <p>
-      <strong>[NAZWA FIRMY]</strong><br>
-      [ADRES SIEDZIBY]<br>
-      Contact: <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a>
+      <strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a>
     </p>
     <p>
       <a href="privacy.html">Privacy policy</a>
@@ -390,7 +404,7 @@
 
     <div class="todo">
       <strong>Do uzupełnienia przed wystawieniem strony:</strong>
-      nazwa firmy, adres siedziby i adres e-mail w tej stopce (te same, które
+      nazwa firmy i adres e-mail w tej stopce (te same, które
       wpisujesz w Play Console), tag weryfikacyjny z Search Console
       w sekcji <code>&lt;head&gt;</code> oraz link do aplikacji w Google Play,
       gdy będzie już opublikowana. Ten żółty blok usuń na końcu — jest tylko

@@ -1,0 +1,42 @@
+# app-ads.txt — autoryzowani sprzedawcy powierzchni reklamowej AirFry
+#
+# ============================================================================
+# CO TO JEST I PO CO
+#
+# Standard IAB. Kupujący reklamy pobiera ten plik z domeny podanej w sklepie
+# przy aplikacji i sprawdza, czy sprzedawca oferujący nasze wyświetlenia jest
+# do tego upoważniony. Bez pliku część kupujących w ogóle nie licytuje —
+# nie dlatego, że coś jest nie tak, tylko dlatego, że nie potrafią odróżnić
+# naszych wyświetleń od podrobionych.
+#
+# Innymi słowy: brak tego pliku to nie błąd, tylko cicho niższe stawki.
+#
+# ============================================================================
+# JAK GO UZUPEŁNIĆ
+#
+# 1. Identyfikator wydawcy jest już wpisany: pub-6805917383158763.
+#    (AdMob → Ustawienia → Konto, jeśli kiedyś trzeba go sprawdzić.)
+# 2. Nic nie podmieniaj — linijka na dole jest gotowa.
+# 3. Plik musi być dostępny dokładnie pod adresem:
+#       https://TWOJA-DOMENA/app-ads.txt
+#    czyli w katalogu głównym domeny — nie w podkatalogu.
+# 4. W Play Console przy aplikacji musi być podana ta sama domena
+#    (pole „Witryna" w danych sklepowych). Google porównuje jedno z drugim.
+# 5. AdMob → Aplikacje → app-ads.txt pokaże status. Weryfikacja bywa
+#    widoczna dopiero po ~24 godzinach — brak zielonego znaczka pierwszego
+#    dnia nie znaczy, że coś jest źle.
+#
+# Ostatni ciąg (f08c47fec0942fa0) to identyfikator Google w rejestrze TAG
+# i jest taki sam dla wszystkich wydawców — nie podmieniaj go.
+#
+# ============================================================================
+# UWAGA PRZY HOSTINGU W PODKATALOGU
+#
+# Jeśli strona stoi pod adresem typu konto.github.io/airfry/, to katalogiem
+# głównym domeny jest konto.github.io — i tam musi trafić app-ads.txt, czyli
+# do repozytorium konto.github.io, a nie tego. To jeden z powodów, dla których
+# własna domena albo osobne repozytorium na stronę jest wygodniejsze
+# (patrz docs/hosting.md).
+# ============================================================================
+
+google.com, pub-6805917383158763, DIRECT, f08c47fec0942fa0
