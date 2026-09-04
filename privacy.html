@@ -1,0 +1,430 @@
+<!doctype html>
+<!--
+  Publiczna wersja docs/privacy-policy.md. To ten adres podaje się w Play
+  Console jako politykę prywatności — pole jest wymagane, a Google sprawdza,
+  czy adres odpowiada i czy dokument mówi o tym, co aplikacja faktycznie robi.
+
+  Przy każdej zmianie docs/privacy-policy.md popraw ten plik i datę w obu.
+  Dwie kopie tej samej treści to koszt tego, że repozytorium trzyma wersję
+  do czytania, a strona wersję do wystawienia — rozjechanie się ich jest
+  jedyną realną wadą tego układu, więc pilnuj daty.
+-->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AirFry — polityka prywatności</title>
+<meta name="description" content="Polityka prywatności aplikacji AirFry: co zostaje na telefonie, co zbiera SDK reklamowe Google AdMob i jak wycofać zgodę.">
+<link rel="icon" href="img/icon-512.png">
+<style>
+  :root {
+    --ember: #E0621B;
+    --charcoal: #1C1917;
+    --cream: #FBF7F2;
+    --surface: #F2E7DE;
+    --muted: #52443C;
+    --outline: #D8C7BC;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 68ch;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+  }
+
+  a { color: #a8410a; }
+
+  h1 { font-size: 30px; letter-spacing: -0.02em; margin: 0 0 6px; }
+
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+
+  .back { font-size: 15px; }
+
+  h2 {
+    margin: 48px 0 8px;
+    font-size: 24px;
+    border-top: 1px solid var(--outline);
+    padding-top: 28px;
+  }
+
+  h3 { margin: 32px 0 6px; font-size: 19px; }
+
+  p, li { max-width: 68ch; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--outline);
+    vertical-align: top;
+  }
+
+  th { background: var(--surface); font-weight: 600; }
+
+  code {
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .short {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 4px 22px 18px;
+    margin: 20px 0 0;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--outline);
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream: #17130F;
+      --charcoal: #F5EDE6;
+      --surface: #2A211B;
+      --muted: #C7B4A7;
+      --outline: #4A3B33;
+    }
+    a { color: #FFB183; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="back"><a href="index.html">← AirFry</a></p>
+
+  <h1>Polityka prywatności / Privacy Policy</h1>
+  <p class="updated">Ostatnia aktualizacja / Last updated: 2026-09-04</p>
+
+  <h2>Polski</h2>
+
+  <div class="short">
+    <h3>W skrócie</h3>
+    <p>
+      <strong>Sama aplikacja nie zbiera niczego.</strong> Twoje przepisy,
+      notatki, lista zakupów i plan tygodnia zostają na telefonie. Bez konta,
+      bez logowania, bez naszego serwera.
+    </p>
+    <p>
+      <strong>Reklamy zbierają.</strong> AirFry pokazuje reklamy Google AdMob,
+      a to SDK odczytuje identyfikator reklamowy urządzenia i raportuje Google
+      wyświetlenia reklam. To jest całe zbieranie danych w tej aplikacji,
+      pochodzi od jednej firmy trzeciej i można je wyłączyć na dwa sposoby:
+      wycofać zgodę albo kupić jednorazowy odblok bez reklam.
+    </p>
+    <p>
+      Przepisy, minutnik, kalkulator i lista zakupów działają całkowicie bez
+      internetu. Możesz włączyć tryb samolotowy i gotować — stracisz tylko
+      reklamy.
+    </p>
+  </div>
+
+  <h3>Co aplikacja przechowuje na urządzeniu</h3>
+  <ul>
+    <li>Przepisy bazowe (102), dostarczone razem z aplikacją</li>
+    <li>Przepisy, które sam dodasz albo zmienisz</li>
+    <li>Ulubione, kolekcje i notatki własne</li>
+    <li>Listę zakupów i plan tygodnia</li>
+    <li>Ustawienia: język, jednostkę temperatury, tryb ciemny, dźwięki alarmu</li>
+    <li>Informację, czy kupiłeś wersję bez reklam</li>
+  </ul>
+  <p>
+    Wszystko siedzi w lokalnej bazie i w lokalnych ustawieniach. Odinstalowanie
+    aplikacji usuwa to w całości.
+  </p>
+
+  <h3>Zdjęcia</h3>
+  <p>
+    Jeśli dodasz zdjęcie do własnego przepisu, aplikacja zapisuje
+    <strong>odwołanie</strong> do pliku (<code>content://</code> URI), a nie
+    kopię, i nigdzie go nie wysyła. Wybór pliku odbywa się przez systemowy
+    selektor Androida — dlatego aplikacja nigdy nie prosi o dostęp do galerii.
+  </p>
+
+  <h3>Reklamy (Google AdMob)</h3>
+  <p>
+    AirFry pokazuje banery i jedną kartę reklamy natywnej na listach przepisów.
+    Dostarcza je <strong>Google AdMob</strong>. Żeby to działało, SDK AdMob
+    wewnątrz aplikacji może zbierać i przesyłać do Google:
+  </p>
+  <ul>
+    <li><strong>identyfikator reklamowy</strong> urządzenia (resetowalny
+      identyfikator, nie Twoje imię)</li>
+    <li><strong>przybliżoną lokalizację</strong>, którą Google wnioskuje
+      z adresu IP</li>
+    <li><strong>interakcje z reklamą</strong> — że reklama się pokazała i czy
+      została kliknięta</li>
+    <li><strong>diagnostykę</strong> własnych błędów SDK</li>
+  </ul>
+  <p>
+    Aplikacja nie wysyła Google niczego o tym, <strong>co gotujesz</strong>.
+    Twoje przepisy, notatki, ulubione, lista zakupów i plan nigdy nie są
+    częścią żądania reklamy.
+  </p>
+  <p>Google jest niezależnym administratorem tych danych. Jego dokumenty:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Polityka prywatności Google</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites">Jak Google wykorzystuje dane z aplikacji korzystających z jego usług</a></li>
+  </ul>
+  <p>
+    <strong>Zgoda.</strong> W Unii Europejskiej, Wielkiej Brytanii
+    i Szwajcarii aplikacja pokazuje przy pierwszym uruchomieniu certyfikowany
+    przez Google formularz zgody. Jeśli odmówisz reklam personalizowanych,
+    reklamy nadal się pojawią, ale niepersonalizowane. Zdanie można zmienić
+    w każdej chwili: <strong>Ustawienia → Zgoda na reklamy</strong>.
+  </p>
+  <p>
+    <strong>Reset identyfikatora.</strong> Android pozwala zresetować albo
+    usunąć identyfikator reklamowy: Ustawienia → Prywatność → Reklamy
+    (dokładna ścieżka zależy od producenta telefonu).
+  </p>
+  <p>
+    <strong>Wersja bez reklam.</strong> Po zakupie jednorazowego odbloku
+    aplikacja nie zamawia żadnej reklamy, nie pokazuje formularza zgody
+    i <strong>wcale nie inicjalizuje SDK reklamowego</strong>. Nic nie jest
+    odczytywane i nic nie jest wysyłane.
+  </p>
+
+  <h3>Zakup (Google Play Billing)</h3>
+  <p>
+    Odblok bez reklam to zakup jednorazowy obsługiwany przez
+    <strong>Google Play</strong>. Nigdy nie widzimy danych Twojej płatności —
+    aplikacja dowiaduje się wyłącznie tego, czy produkt jest kupiony. Zakup
+    jest przypisany do Twojego konta Google, więc wraca bezpłatnie po
+    reinstalacji i na nowym telefonie.
+  </p>
+
+  <h3>Uprawnienia i po co są</h3>
+  <table>
+    <tr><th>Uprawnienie</th><th>Po co</th></tr>
+    <tr><td><code>INTERNET</code></td><td>reklamy i formularz zgody — nic innego w aplikacji go nie używa</td></tr>
+    <tr><td><code>AD_ID</code></td><td>pozwala SDK reklamowemu odczytać identyfikator reklamowy</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code></td><td>minutnik odlicza dalej po wyjściu z aplikacji</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>minutnik mówi, kiedy przewrócić potrawę</td></tr>
+    <tr><td><code>VIBRATE</code></td><td>alarm wibruje</td></tr>
+    <tr><td><code>WAKE_LOCK</code></td><td>odliczanie jest dokładne przy zgaszonym ekranie</td></tr>
+    <tr><td><code>USE_FULL_SCREEN_INTENT</code></td><td>alarm końca pieczenia pokazuje się na ekranie blokady, jak budzik</td></tr>
+  </table>
+  <p>Nie ma uprawnienia do lokalizacji, kontaktów, mikrofonu ani kamery.</p>
+
+  <h3>Bez analityki, bez raportowania awarii</h3>
+  <p>
+    Poza opisanym wyżej SDK reklamowym aplikacja nie zawiera żadnego SDK
+    analitycznego ani raportującego awarie. Nikt — w tym autor aplikacji — nie
+    dowiaduje się, które przepisy otwierasz ani jak z niej korzystasz.
+  </p>
+
+  <h3>Dwie rzeczy warte uczciwej wzmianki</h3>
+  <p>
+    <strong>Kopia zapasowa Androida.</strong> Systemowa kopia zapasowa
+    (Ustawienia → Google → Kopia zapasowa) może skopiować dane tej aplikacji na
+    <em>Twój</em> Dysk Google, zaszyfrowane, razem z danymi innych aplikacji. To
+    funkcja systemu, a nie coś, co aplikacja wysyła: dane idą na Twoje własne
+    konto Google i tylko wtedy, gdy kopia jest włączona. Zostawiamy ją włączoną
+    celowo, bo to jedyna rzecz, która ratuje Twoje własne przepisy i notatki
+    przy zmianie telefonu. Można ją wyłączyć w ustawieniach Androida.
+  </p>
+  <p>
+    <strong>Mowa („Czytaj na głos").</strong> Po włączeniu tej opcji aplikacja
+    przekazuje <strong>jedno słowo</strong> — na przykład „Obróć" albo
+    „Gotowe" — silnikowi mowy zainstalowanemu w telefonie. Ten silnik jest
+    osobną aplikacją z własną polityką prywatności. AirFry nie wysyła nic
+    więcej i nic nie dostaje z powrotem. Opcja jest domyślnie wyłączona.
+  </p>
+
+  <h3>Dzieci</h3>
+  <p>
+    Aplikacja nie jest kierowana do dzieci i nie należy do programu „Designed
+    for Families". Zawiera reklamy, więc nie jest odpowiednia jako aplikacja
+    dla dzieci — choć jej treść, czyli przepisy kulinarne, jest odpowiednia dla
+    każdego wieku.
+  </p>
+
+  <h3>Zmiany</h3>
+  <p>Jeśli ta polityka się zmieni, data na górze zmieni się razem z nią.</p>
+
+  <h3>Kontakt</h3>
+  <p>[NAZWA FIRMY] — <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a></p>
+
+  <h2>English</h2>
+
+  <div class="short">
+    <h3>The short version</h3>
+    <p>
+      <strong>The app itself collects nothing.</strong> Your recipes, notes,
+      shopping list and weekly plan stay on your phone. No account, no
+      sign-in, no server of ours.
+    </p>
+    <p>
+      <strong>The ads do collect something.</strong> AirFry shows ads from
+      Google AdMob, and that SDK reads your device's advertising identifier and
+      reports ad views to Google. That is the whole of the data collection in
+      this app, it comes from one third party, and you can switch it off in two
+      ways: withdraw consent, or buy the one-time ad-free unlock.
+    </p>
+    <p>
+      Recipes, the timer, the calculator and the shopping list work with no
+      internet at all. You can put the phone in aeroplane mode and cook — the
+      only thing you lose is the ads.
+    </p>
+  </div>
+
+  <h3>What the app stores on your device</h3>
+  <ul>
+    <li>Built-in recipes (102 of them), shipped inside the app</li>
+    <li>Recipes you add or edit yourself</li>
+    <li>Your favourites, collections and personal notes</li>
+    <li>The shopping list and the weekly plan</li>
+    <li>Settings: language, temperature unit, dark mode, alert sounds</li>
+    <li>Whether you bought the ad-free version</li>
+  </ul>
+  <p>
+    All of it lives in a local database and in local preferences. Uninstalling
+    the app deletes all of it.
+  </p>
+
+  <h3>Photos</h3>
+  <p>
+    If you add a photo to your own recipe, the app stores a
+    <strong>reference</strong> to that file (a <code>content://</code> URI), not
+    a copy, and never uploads it. Picking the file goes through the Android
+    system picker, which is why the app never asks for gallery permission.
+  </p>
+
+  <h3>Advertising (Google AdMob)</h3>
+  <p>
+    AirFry shows banner ads and one native ad card in recipe lists. They are
+    served by <strong>Google AdMob</strong>. To do that, the AdMob SDK inside
+    the app can collect and send to Google:
+  </p>
+  <ul>
+    <li>your device's <strong>advertising identifier</strong> (a resettable ID,
+      not your name)</li>
+    <li><strong>approximate location</strong>, which Google derives from your
+      IP address</li>
+    <li><strong>ad interactions</strong> — that an ad was shown, and whether it
+      was tapped</li>
+    <li><strong>diagnostics</strong> about the SDK's own errors</li>
+  </ul>
+  <p>
+    The app sends Google nothing about <strong>what you cook</strong>. Your
+    recipes, notes, favourites, shopping list and plan are never part of an ad
+    request.
+  </p>
+  <p>Google is an independent controller of that data. Its policies:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses data from apps that use its services</a></li>
+  </ul>
+  <p>
+    <strong>Consent.</strong> In the EEA, the UK and Switzerland the app shows
+    a Google-certified consent form the first time it runs. If you decline
+    personalised ads, you still see ads, but non-personalised ones. You can
+    change your mind at any time:
+    <strong>Settings → Ad privacy options</strong>.
+  </p>
+  <p>
+    <strong>Resetting the identifier.</strong> Android lets you reset or delete
+    the advertising ID entirely: Settings → Privacy → Ads (the exact path
+    varies by manufacturer).
+  </p>
+  <p>
+    <strong>The ad-free version.</strong> If you buy the one-time unlock, the
+    app requests no ads, shows no consent form, and does not initialise the ad
+    SDK at all. Nothing is read and nothing is sent.
+  </p>
+
+  <h3>Purchase (Google Play Billing)</h3>
+  <p>
+    The ad-free unlock is a one-time purchase handled by
+    <strong>Google Play</strong>. We never see your payment details — the app
+    only learns whether the product is owned. The purchase is tied to your
+    Google account, so it comes back for free after a reinstall or on a new
+    phone.
+  </p>
+
+  <h3>Permissions and why they exist</h3>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td><code>INTERNET</code></td><td>ads and the consent form — nothing else in the app uses it</td></tr>
+    <tr><td><code>AD_ID</code></td><td>lets the ad SDK read the advertising identifier</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code></td><td>the timer keeps counting when you leave the app</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>the timer tells you when to turn the food</td></tr>
+    <tr><td><code>VIBRATE</code></td><td>the alert vibrates</td></tr>
+    <tr><td><code>WAKE_LOCK</code></td><td>the countdown stays accurate while the screen is off</td></tr>
+    <tr><td><code>USE_FULL_SCREEN_INTENT</code></td><td>the end-of-cooking alert shows over the lock screen, like an alarm clock</td></tr>
+  </table>
+  <p>There is no location, contacts, microphone, or camera permission.</p>
+
+  <h3>No analytics, no crash reporting</h3>
+  <p>
+    Beyond the ad SDK described above, the app contains no analytics SDK and no
+    crash-reporting SDK. Nobody — including the developer — receives any
+    information about which recipes you open or how you use the app.
+  </p>
+
+  <h3>Two things that deserve honest mention</h3>
+  <p>
+    <strong>Android backup.</strong> Android's own backup feature (Settings →
+    Google → Backup) may copy this app's data to <em>your</em> Google Drive,
+    encrypted, along with your other apps' data. This is a platform feature,
+    not something the app sends: the data goes to your own Google account, and
+    only if you have backup switched on. We deliberately leave it enabled,
+    because it is the only thing that saves your own recipes and notes when you
+    change phones. You can turn it off in Android settings.
+  </p>
+  <p>
+    <strong>Speech ("Say it out loud").</strong> If you enable spoken alerts in
+    Settings, the app hands a <strong>single word</strong> — such as "Turn" or
+    "Done" — to the text-to-speech engine installed on your phone. That engine
+    is a separate application with its own privacy policy. AirFry sends nothing
+    else and receives nothing back. The option is off by default.
+  </p>
+
+  <h3>Children</h3>
+  <p>
+    The app is not directed at children and is not part of the Designed for
+    Families programme. It contains ads, so it is not suitable as a children's
+    app, although its content — cooking recipes — is suitable for all ages.
+  </p>
+
+  <h3>Changes</h3>
+  <p>If this policy ever changes, the date at the top changes with it.</p>
+
+  <h3>Contact</h3>
+  <p>[NAZWA FIRMY] — <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a></p>
+
+  <footer>
+    <p><a href="index.html">← AirFry</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

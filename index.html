@@ -1,0 +1,392 @@
+<!doctype html>
+<!--
+  ============================================================================
+  POTWIERDZENIE WŁASNOŚCI WITRYNY — CZYTAJ TO PIERWSZE
+
+  Google Play weryfikuje witrynę organizacji przez Google Search Console.
+  Kolejność jest taka:
+
+  1. Wystaw tę stronę pod własną domeną (patrz docs/hosting.md).
+  2. Wejdź na https://search.google.com/search-console i dodaj właściwość
+     typu „Prefiks adresu URL" ze swoim adresem.
+  3. Search Console poda metodę weryfikacji. Przy statycznym hostingu
+     najprościej „Tag HTML" — dostaniesz linijkę
+     <meta name="google-site-verification" content="...">.
+  4. WKLEJ JĄ NIŻEJ, w miejsce oznaczone WKLEJ TUTAJ, i wystaw stronę
+     ponownie. Potem kliknij „Zweryfikuj" w Search Console.
+  5. W Play Console → Ustawienia konta wpisz ten sam adres jako witrynę
+     organizacji. Adres MUSI być ten, który zweryfikowałeś — subdomena
+     albo wariant z www to dla Google inna właściwość.
+
+  Czego Google nie przyjmie: pustej strony „coming soon", strony bez
+  informacji o wydawcy i strony bez polityki prywatności. Ta strona ma
+  wszystkie trzy rzeczy — poza danymi, których nie znam. Uzupełnij każde
+  [NAWIAS KWADRATOWY] przed wystawieniem.
+  ============================================================================
+-->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== WKLEJ TUTAJ tag z Google Search Console ===== -->
+<!-- <meta name="google-site-verification" content="TU_WKLEJ_KOD"> -->
+<!-- ================================================== -->
+
+<title>AirFry — przepisy i minutnik do airfryera</title>
+<meta name="description" content="AirFry: 102 przepisy do airfryera z temperaturą i czasem oraz minutnik, który mówi, kiedy przewrócić potrawę. Działa bez internetu, bez konta.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="AirFry — przepisy i minutnik do airfryera">
+<meta property="og:description" content="102 przepisy z temperaturą i czasem. Minutnik, który mówi, kiedy przewrócić. Działa bez internetu.">
+<meta property="og:image" content="img/icon-512.png">
+
+<link rel="icon" href="img/icon-512.png">
+
+<style>
+  /* Paleta wzięta z aplikacji (ui/theme/Theme.kt), żeby strona i produkt
+     wyglądały jak jedna rzecz, a nie dwie. */
+  :root {
+    --ember: #E0621B;
+    --ember-soft: #FFE0CC;
+    --charcoal: #1C1917;
+    --cream: #FBF7F2;
+    --surface: #F2E7DE;
+    --muted: #52443C;
+    --outline: #D8C7BC;
+    --measure: 65ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- nagłówek ---------- */
+
+  header {
+    padding: 56px 0 40px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand img {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+  }
+
+  .brand h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+  }
+
+  .brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .lead {
+    max-width: var(--measure);
+    margin: 28px 0 0;
+    font-size: 21px;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .store {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 26px;
+    background: var(--ember);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .store:hover { background: #c65516; }
+
+  .store-note {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- zrzuty ---------- */
+
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    margin: 48px 0 8px;
+  }
+
+  .shots figure {
+    margin: 0;
+  }
+
+  .shots img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--outline);
+    border-radius: 18px;
+  }
+
+  .shots figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- funkcje ---------- */
+
+  section { padding: 44px 0; }
+
+  h2 {
+    font-size: 15px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features li {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px 22px;
+  }
+
+  .features strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .features span {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* ---------- prywatność ---------- */
+
+  .privacy {
+    background: var(--ember-soft);
+    border-radius: 20px;
+    padding: 28px 28px 24px;
+  }
+
+  .privacy h2 { color: #7a2d00; }
+
+  .privacy p {
+    max-width: var(--measure);
+    margin: 0 0 12px;
+  }
+
+  .privacy a { color: #8f3400; }
+
+  /* ---------- stopka ---------- */
+
+  footer {
+    border-top: 1px solid var(--outline);
+    margin-top: 32px;
+    padding: 32px 0 56px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--muted); }
+
+  .todo {
+    background: #fff4d6;
+    border: 1px dashed #b8860b;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 24px 0 0;
+    font-size: 14px;
+    color: #6b4e00;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream: #17130F;
+      --charcoal: #F5EDE6;
+      --surface: #2A211B;
+      --muted: #C7B4A7;
+      --outline: #4A3B33;
+      --ember-soft: #45210B;
+    }
+    .privacy h2 { color: #FFB183; }
+    .privacy a { color: #FFB183; }
+    .store { color: #17130F; background: #FF9052; }
+    .store:hover { background: #ffa571; }
+    .todo { background: #2b2410; border-color: #7a6320; color: #e7d9a8; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Ikona aplikacji AirFry">
+      <div>
+        <h1>AirFry</h1>
+        <p>Przepisy i minutnik do airfryera</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Sto dwa przepisy z temperaturą, czasem i składnikami — i minutnik, który
+      sam mówi, kiedy przewrócić potrawę, wstrząsnąć koszem albo dołożyć ser.
+      Przepisy, minutnik, kalkulator i lista zakupów działają bez internetu.
+    </p>
+
+    <!-- Po publikacji podmień href na adres z Play. Do tego czasu link
+         nikogo nie wyprowadza w pole, bo mówi wprost, że aplikacji
+         jeszcze nie ma w sklepie. -->
+    <a class="store" href="#kontakt">Wkrótce w Google Play</a>
+    <p class="store-note">Android 8.0 lub nowszy.</p>
+
+    <div class="shots">
+      <figure>
+        <img src="img/przepis.jpg" alt="Ekran przepisu: zdjęcie potrawy, temperatura, czas i lista składników">
+        <figcaption>Każdy przepis ma temperaturę, czas i zdjęcie — wbudowane, nie pobierane.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/minutnik.jpg" alt="Minutnik w trakcie odliczania z podpowiedzią, co zrobić teraz">
+        <figcaption>Minutnik nie tylko odlicza — mówi, co zrobić i kiedy.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/lista.jpg" alt="Lista przepisów w kategorii mięso i drób">
+        <figcaption>Dziesięć kategorii, wyszukiwanie po składniku, filtr „do 20 minut".</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section>
+    <h2>Co jest w środku</h2>
+    <ul class="features">
+      <li>
+        <strong>102 przepisy</strong>
+        <span>Mięso, ryby, warzywa, ziemniaki, zapiekanki, śniadania, przekąski,
+        wypieki i odgrzewanie. Każdy z temperaturą, czasem, składnikami
+        i krokami.</span>
+      </li>
+      <li>
+        <strong>Minutnik, który mówi co robić</strong>
+        <span>Przypomina o przewróceniu i wstrząśnięciu koszem w środku
+        pieczenia. Dzwoni głośnością alarmu, więc słychać go przy odkręconej
+        wodzie, i odlicza dalej po wyjściu z aplikacji.</span>
+      </li>
+      <li>
+        <strong>Kalkulator z piekarnika na airfryer</strong>
+        <span>Na opakowaniu jest tylko piekarnik? Wpisz jego temperaturę
+        i czas, a dostaniesz gotowe ustawienia airfryera.</span>
+      </li>
+      <li>
+        <strong>Lista zakupów, która scala</strong>
+        <span>Dwa przepisy z cebulą dają jedną pozycję, nie dwie. Odhaczone
+        spadają na dół, żeby było widać, co już jest w koszyku.</span>
+      </li>
+      <li>
+        <strong>Plan tygodnia</strong>
+        <span>Przypisz przepisy do dni, a potem jednym tapnięciem zamień cały
+        tydzień w jedną listę zakupów.</span>
+      </li>
+      <li>
+        <strong>Dziewięć języków, dwie skale</strong>
+        <span>Polski, angielski, niemiecki, francuski, hiszpański, portugalski,
+        włoski, holenderski i chiński — przetłumaczone są też składniki, kroki
+        i wskazówki. Celsjusz albo Fahrenheit.</span>
+      </li>
+      <li>
+        <strong>Własne przepisy i notatki</strong>
+        <span>Dodaj swoje, dopisz notatkę także do przepisu z bazy, zbieraj
+        ulubione i twórz kolekcje.</span>
+      </li>
+      <li>
+        <strong>Działa bez internetu</strong>
+        <span>Przepisy, minutnik, kalkulator i lista zakupów działają w trybie
+        samolotowym. Bez konta i bez logowania.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="privacy">
+      <h2>Prywatność bez gwiazdek</h2>
+      <p>
+        Aplikacja nie ma serwera i nie wysyła nigdzie tego, co gotujesz. Twoje
+        przepisy, notatki, lista zakupów i plan tygodnia zostają na telefonie —
+        nie ma konta, nie ma logowania, nie ma analityki.
+      </p>
+      <p>
+        Internet potrzebny jest wyłącznie reklamom, które finansują aplikację.
+        Kto ich nie chce, może je usunąć ze wszystkich ekranów jednorazowym
+        zakupem — bez abonamentu.
+      </p>
+      <p>
+        <a href="privacy.html">Pełna polityka prywatności</a> — co dokładnie
+        zbiera SDK reklamowe, jak wycofać zgodę i jak zresetować identyfikator
+        reklamowy.
+      </p>
+    </div>
+  </section>
+
+  <footer id="kontakt">
+    <p>
+      <strong>[NAZWA FIRMY]</strong><br>
+      [ADRES SIEDZIBY]<br>
+      Kontakt: <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a>
+    </p>
+    <p>
+      <a href="privacy.html">Polityka prywatności</a>
+    </p>
+    <p>Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+
+    <div class="todo">
+      <strong>Do uzupełnienia przed wystawieniem strony:</strong>
+      nazwa firmy, adres siedziby i adres e-mail w tej stopce (te same, które
+      wpisujesz w Play Console), tag weryfikacyjny z Search Console
+      w sekcji <code>&lt;head&gt;</code> oraz link do aplikacji w Google Play,
+      gdy będzie już opublikowana. Ten żółty blok usuń na końcu — jest tylko
+      dla Ciebie.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
