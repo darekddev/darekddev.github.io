@@ -3,6 +3,10 @@
   ============================================================================
   POTWIERDZENIE WŁASNOŚCI WITRYNY — CZYTAJ TO PIERWSZE
 
+  (Komentarze w tym pliku są po polsku celowo: to notatki dla Ciebie, nie
+  treść dla użytkownika. Treść strony jest po angielsku, bo czyta ją recenzent
+  Google i użytkownicy z dziewięciu rynków — patrz docs/hosting.md.)
+
   Google Play weryfikuje witrynę organizacji przez Google Search Console.
   Kolejność jest taka:
 
@@ -24,7 +28,7 @@
   [NAWIAS KWADRATOWY] przed wystawieniem.
   ============================================================================
 -->
-<html lang="pl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,12 +37,12 @@
 <!-- <meta name="google-site-verification" content="TU_WKLEJ_KOD"> -->
 <!-- ================================================== -->
 
-<title>AirFry — przepisy i minutnik do airfryera</title>
-<meta name="description" content="AirFry: 102 przepisy do airfryera z temperaturą i czasem oraz minutnik, który mówi, kiedy przewrócić potrawę. Działa bez internetu, bez konta.">
+<title>AirFry — air fryer recipes and a timer that says when to turn</title>
+<meta name="description" content="AirFry: 100+ air fryer recipes with temperature and time, and a timer that tells you when to turn the food. Works offline, no account.">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="AirFry — przepisy i minutnik do airfryera">
-<meta property="og:description" content="102 przepisy z temperaturą i czasem. Minutnik, który mówi, kiedy przewrócić. Działa bez internetu.">
+<meta property="og:title" content="AirFry — air fryer recipes and timer">
+<meta property="og:description" content="100+ recipes with temperature and time. A timer that says when to turn. Works offline.">
 <meta property="og:image" content="img/icon-512.png">
 
 <link rel="icon" href="img/icon-512.png">
@@ -79,9 +83,7 @@
 
   /* ---------- nagłówek ---------- */
 
-  header {
-    padding: 56px 0 40px;
-  }
+  header { padding: 56px 0 40px; }
 
   .brand {
     display: flex;
@@ -143,9 +145,7 @@
     margin: 48px 0 8px;
   }
 
-  .shots figure {
-    margin: 0;
-  }
+  .shots figure { margin: 0; }
 
   .shots img {
     width: 100%;
@@ -261,121 +261,132 @@
 
   <header>
     <div class="brand">
-      <img src="img/icon-512.png" alt="Ikona aplikacji AirFry">
+      <img src="img/icon-512.png" alt="AirFry app icon">
       <div>
         <h1>AirFry</h1>
-        <p>Przepisy i minutnik do airfryera</p>
+        <p>Air fryer recipes and timer</p>
       </div>
     </div>
 
     <p class="lead">
-      Sto dwa przepisy z temperaturą, czasem i składnikami — i minutnik, który
-      sam mówi, kiedy przewrócić potrawę, wstrząsnąć koszem albo dołożyć ser.
-      Przepisy, minutnik, kalkulator i lista zakupów działają bez internetu.
+      More than a hundred recipes with temperature, time and ingredients — and a
+      timer that tells you when to turn the food, shake the basket or add the
+      cheese. Recipes, timer, calculator and shopping list all work with no
+      internet.
     </p>
 
     <!-- Po publikacji podmień href na adres z Play. Do tego czasu link
          nikogo nie wyprowadza w pole, bo mówi wprost, że aplikacji
          jeszcze nie ma w sklepie. -->
-    <a class="store" href="#kontakt">Wkrótce w Google Play</a>
-    <p class="store-note">Android 8.0 lub nowszy.</p>
+    <a class="store" href="#contact">Coming soon to Google Play</a>
+    <p class="store-note">Android 8.0 or newer.</p>
 
     <div class="shots">
       <figure>
-        <img src="img/przepis.jpg" alt="Ekran przepisu: zdjęcie potrawy, temperatura, czas i lista składników">
-        <figcaption>Każdy przepis ma temperaturę, czas i zdjęcie — wbudowane, nie pobierane.</figcaption>
+        <img src="img/przepis.jpg" alt="Recipe screen showing a photo of the dish, temperature, cooking time and the ingredient list">
+        <figcaption>Every recipe carries its temperature, time and a photo — shipped inside the app, not downloaded.</figcaption>
       </figure>
       <figure>
-        <img src="img/minutnik.jpg" alt="Minutnik w trakcie odliczania z podpowiedzią, co zrobić teraz">
-        <figcaption>Minutnik nie tylko odlicza — mówi, co zrobić i kiedy.</figcaption>
+        <img src="img/minutnik.jpg" alt="Running timer with a reminder of what to do next">
+        <figcaption>The timer does more than count down — it says what to do, and when.</figcaption>
       </figure>
       <figure>
-        <img src="img/lista.jpg" alt="Lista przepisów w kategorii mięso i drób">
-        <figcaption>Dziesięć kategorii, wyszukiwanie po składniku, filtr „do 20 minut".</figcaption>
+        <img src="img/lista.jpg" alt="Recipe list in the meat and poultry category">
+        <figcaption>Ten categories, search by ingredient, and an “under 20 minutes” filter.</figcaption>
       </figure>
     </div>
   </header>
 
   <section>
-    <h2>Co jest w środku</h2>
+    <h2>What is inside</h2>
     <ul class="features">
       <li>
-        <strong>102 przepisy</strong>
-        <span>Mięso, ryby, warzywa, ziemniaki, zapiekanki, śniadania, przekąski,
-        wypieki i odgrzewanie. Każdy z temperaturą, czasem, składnikami
-        i krokami.</span>
+        <strong>100+ recipes</strong>
+        <span>Meat, fish, vegetables, potatoes, bakes, breakfast, snacks,
+        desserts and reheating. Each with temperature, time, ingredients and
+        steps.</span>
       </li>
       <li>
-        <strong>Minutnik, który mówi co robić</strong>
-        <span>Przypomina o przewróceniu i wstrząśnięciu koszem w środku
-        pieczenia. Dzwoni głośnością alarmu, więc słychać go przy odkręconej
-        wodzie, i odlicza dalej po wyjściu z aplikacji.</span>
+        <strong>A timer that tells you what to do</strong>
+        <span>It reminds you to turn the food and shake the basket partway
+        through. It rings at alarm volume, so you hear it over running water,
+        and keeps counting after you leave the app.</span>
       </li>
       <li>
-        <strong>Kalkulator z piekarnika na airfryer</strong>
-        <span>Na opakowaniu jest tylko piekarnik? Wpisz jego temperaturę
-        i czas, a dostaniesz gotowe ustawienia airfryera.</span>
+        <strong>Oven-to-air-fryer calculator</strong>
+        <span>The packaging only gives oven settings? Enter its temperature and
+        time and get the air fryer equivalent.</span>
       </li>
       <li>
-        <strong>Lista zakupów, która scala</strong>
-        <span>Dwa przepisy z cebulą dają jedną pozycję, nie dwie. Odhaczone
-        spadają na dół, żeby było widać, co już jest w koszyku.</span>
+        <strong>A shopping list that merges</strong>
+        <span>Two recipes with onion give you one line, not two. Ticked items
+        drop to the bottom so you can see what is already in the basket.</span>
       </li>
       <li>
-        <strong>Plan tygodnia</strong>
-        <span>Przypisz przepisy do dni, a potem jednym tapnięciem zamień cały
-        tydzień w jedną listę zakupów.</span>
+        <strong>Weekly plan</strong>
+        <span>Assign recipes to days, then turn the whole week into a single
+        shopping list with one tap.</span>
       </li>
       <li>
-        <strong>Dziewięć języków, dwie skale</strong>
-        <span>Polski, angielski, niemiecki, francuski, hiszpański, portugalski,
-        włoski, holenderski i chiński — przetłumaczone są też składniki, kroki
-        i wskazówki. Celsjusz albo Fahrenheit.</span>
+        <strong>Nine languages, two temperature scales</strong>
+        <span>English, Polish, German, French, Spanish, Portuguese, Italian,
+        Dutch and Chinese — the ingredients, steps and tips are translated too,
+        not just the interface. Celsius or Fahrenheit.</span>
       </li>
       <li>
-        <strong>Własne przepisy i notatki</strong>
-        <span>Dodaj swoje, dopisz notatkę także do przepisu z bazy, zbieraj
-        ulubione i twórz kolekcje.</span>
+        <strong>Your own recipes and notes</strong>
+        <span>Add your own, write a note on a built-in recipe as well, mark
+        favourites and group them into collections.</span>
       </li>
       <li>
-        <strong>Działa bez internetu</strong>
-        <span>Przepisy, minutnik, kalkulator i lista zakupów działają w trybie
-        samolotowym. Bez konta i bez logowania.</span>
+        <strong>Works offline</strong>
+        <span>Recipes, the timer, the calculator and the shopping list all work
+        in aeroplane mode. No account, no sign-in.</span>
       </li>
     </ul>
   </section>
 
   <section>
     <div class="privacy">
-      <h2>Prywatność bez gwiazdek</h2>
+      <h2>Privacy, without asterisks</h2>
       <p>
-        Aplikacja nie ma serwera i nie wysyła nigdzie tego, co gotujesz. Twoje
-        przepisy, notatki, lista zakupów i plan tygodnia zostają na telefonie —
-        nie ma konta, nie ma logowania, nie ma analityki.
+        The app has no server and never sends anywhere what you cook. Your
+        recipes, notes, shopping list and weekly plan stay on your phone —
+        there is no account, no sign-in and no analytics.
       </p>
       <p>
-        Internet potrzebny jest wyłącznie reklamom, które finansują aplikację.
-        Kto ich nie chce, może je usunąć ze wszystkich ekranów jednorazowym
-        zakupem — bez abonamentu.
+        The internet is needed only for the ads that pay for the app. If you
+        would rather not see them, a one-time purchase removes them from every
+        screen. No subscription.
       </p>
       <p>
-        <a href="privacy.html">Pełna polityka prywatności</a> — co dokładnie
-        zbiera SDK reklamowe, jak wycofać zgodę i jak zresetować identyfikator
-        reklamowy.
+        <a href="privacy.html">Full privacy policy</a> — exactly what the ad
+        SDK collects, how to withdraw consent and how to reset your advertising
+        identifier.
       </p>
     </div>
   </section>
 
-  <footer id="kontakt">
+  <footer id="contact">
+    <!--
+      Nazwa firmy i e-mail: zostaw. Google nie wymaga ich NA STRONIE, ale
+      recenzent porównuje ją z kontem w Play Console, a strona bez wydawcy
+      wygląda jak strona-wydmuszka. Te dane i tak stają się publiczne:
+      Play pokazuje nazwę wydawcy (a przy koncie firmowym również adres)
+      w sekcji kontaktowej samego wpisu w sklepie.
+
+      Adres siedziby: opcjonalny. Jeśli nie chcesz go tu podawać, usuń wiersz
+      [ADRES SIEDZIBY] — witryna zostanie zweryfikowana tak samo.
+    -->
     <p>
       <strong>[NAZWA FIRMY]</strong><br>
       [ADRES SIEDZIBY]<br>
-      Kontakt: <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a>
+      Contact: <a href="mailto:[ADRES E-MAIL]">[ADRES E-MAIL]</a>
     </p>
     <p>
-      <a href="privacy.html">Polityka prywatności</a>
+      <a href="privacy.html">Privacy policy</a>
     </p>
-    <p>Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
 
     <div class="todo">
       <strong>Do uzupełnienia przed wystawieniem strony:</strong>
