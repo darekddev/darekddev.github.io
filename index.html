@@ -1,41 +1,37 @@
 <!doctype html>
 <!--
   ============================================================================
-  POTWIERDZENIE WŁASNOŚCI WITRYNY — CZYTAJ TO PIERWSZE
+  STRONA PRODUKTU I WITRYNA ORGANIZACJI — https://ddmobile.pl
 
   (Komentarze w tym pliku są po polsku celowo: to notatki dla Ciebie, nie
   treść dla użytkownika. Treść strony jest po angielsku, bo czyta ją recenzent
   Google i użytkownicy z dziewięciu rynków — patrz docs/hosting.md.)
 
-  Google Play weryfikuje witrynę organizacji przez Google Search Console.
-  Kolejność jest taka:
+  Stan na 5 września 2026 — zrobione:
 
-  1. Wystaw tę stronę pod własną domeną (patrz docs/hosting.md).
-  2. Wejdź na https://search.google.com/search-console i dodaj właściwość
-     typu „Prefiks adresu URL" ze swoim adresem.
-  3. Search Console poda metodę weryfikacji. Przy statycznym hostingu
-     najprościej „Tag HTML" — dostaniesz linijkę
-     <meta name="google-site-verification" content="...">.
-  4. WKLEJ JĄ NIŻEJ, w miejsce oznaczone WKLEJ TUTAJ, i wystaw stronę
-     ponownie. Potem kliknij „Zweryfikuj" w Search Console.
-  5. W Play Console → Ustawienia konta wpisz ten sam adres jako witrynę
-     organizacji. Adres MUSI być ten, który zweryfikowałeś — subdomena
-     albo wariant z www to dla Google inna właściwość.
+  - domena `ddmobile.pl` podpięta do repozytorium `darekddev.github.io`
+    (Settings → Pages → Custom domain), certyfikat HTTPS wystawiony,
+  - własność domeny **zweryfikowana w Search Console rekordem TXT w DNS**,
+    czyli metodą domenową: obejmuje http i https, www i wszystkie subdomeny.
+    Dlatego w <head> NIE MA i nie potrzeba znacznika
+    `google-site-verification` — ta metoda go nie używa,
+  - nazwa wydawcy i adres kontaktowy wpisane w stopce.
 
-  Czego Google nie przyjmie: pustej strony „coming soon", strony bez
-  informacji o wydawcy i strony bez polityki prywatności. Ta strona ma
-  wszystkie trzy rzeczy — poza danymi, których nie znam. Uzupełnij każde
-  [NAWIAS KWADRATOWY] przed wystawieniem.
+  Zostało jedno, do zrobienia po publikacji aplikacji:
+
+  - podmienić `href` przycisku „Coming soon to Google Play" na adres wpisu
+    w sklepie i zmienić jego treść na „Get it on Google Play".
+
+  Adresy, które ta strona obsługuje dla Play i AdMob:
+    https://ddmobile.pl               witryna organizacji
+    https://ddmobile.pl/privacy.html  polityka prywatności
+    https://ddmobile.pl/app-ads.txt   autoryzowani sprzedawcy AdMob
   ============================================================================
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- ===== WKLEJ TUTAJ tag z Google Search Console ===== -->
-<!-- <meta name="google-site-verification" content="TU_WKLEJ_KOD"> -->
-<!-- ================================================== -->
 
 <title>AirFry: Air Fryer Companion</title>
 <meta name="description" content="AirFry: 100+ air fryer recipes with temperature and time, and a timer that tells you when to turn the food. Works offline, no account.">
@@ -234,15 +230,6 @@
 
   footer a { color: var(--muted); }
 
-  .todo {
-    background: #fff4d6;
-    border: 1px dashed #b8860b;
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin: 24px 0 0;
-    font-size: 14px;
-    color: #6b4e00;
-  }
 
   @media (prefers-color-scheme: dark) {
     :root {
@@ -257,7 +244,6 @@
     .privacy a { color: #FFB183; }
     .store { color: #17130F; background: #FF9052; }
     .store:hover { background: #ffa571; }
-    .todo { background: #2b2410; border-color: #7a6320; color: #e7d9a8; }
   }
 </style>
 </head>
@@ -401,15 +387,6 @@
       <a href="privacy.html">Privacy policy</a>
     </p>
     <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
-
-    <div class="todo">
-      <strong>Do uzupełnienia przed wystawieniem strony:</strong>
-      nazwa firmy i adres e-mail w tej stopce (te same, które
-      wpisujesz w Play Console), tag weryfikacyjny z Search Console
-      w sekcji <code>&lt;head&gt;</code> oraz link do aplikacji w Google Play,
-      gdy będzie już opublikowana. Ten żółty blok usuń na końcu — jest tylko
-      dla Ciebie.
-    </div>
   </footer>
 
 </div>
