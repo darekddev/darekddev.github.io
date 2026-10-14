@@ -30,7 +30,7 @@
 <meta property="og:title" content="DDmobile — apps and games">
 <meta property="og:description" content="AirFry, Shonen Soccer and Shonen Soccer: Striker for Android.">
 <meta property="og:image" content="https://ddmobile.pl/shonen-soccer/img/feature.jpg">
-<link rel="icon" href="shonen-soccer/img/icon-512.png">
+<link rel="icon" href="img/ddmobile-icon.svg" type="image/svg+xml">
 <style>
   :root {
     --bg: #f6f4ef;
@@ -66,7 +66,9 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
   header { padding: 64px 0 36px; }
-  header h1 { margin: 0; font-size: clamp(32px, 7vw, 48px); letter-spacing: -0.03em; line-height: 1.05; }
+  header h1 { margin: 0; line-height: 0; }
+  .logo svg { width: min(360px, 80vw); height: auto; --d1: #E0621B; --d2: #FFC21A; }
+  @media (prefers-color-scheme: dark) { .logo svg { --d1: #FF7A33; --d2: #FFD23C; } }
   header p { margin: 12px 0 0; color: var(--muted); font-size: 19px; max-width: 52ch; }
 
   .tiles {
@@ -140,7 +142,15 @@
 <div class="wrap">
 
   <header>
-    <h1>DDmobile</h1>
+    <h1 class="logo">
+      <svg viewBox="0 0 420 120" role="img" aria-label="DDmobile">
+        <g transform="translate(4 10)" fill-rule="evenodd">
+          <path d="M0 0h20a50 50 0 0 1 0 100H0z M20 26h2a24 24 0 0 1 0 48h-2z" fill="var(--d1)"/>
+          <path d="M50 0h20a50 50 0 0 1 0 100H50z M70 26h2a24 24 0 0 1 0 48h-2z" fill="var(--d2)"/>
+        </g>
+        <text x="150" y="80" font-family="-apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="60" font-weight="800" fill="currentColor" letter-spacing="-1.5">DD<tspan font-weight="400">mobile</tspan></text>
+      </svg>
+    </h1>
     <p>Android apps and games by Dariusz Drozd. Free on Google Play, no account needed.</p>
   </header>
 
