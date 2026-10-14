@@ -1,0 +1,392 @@
+<!doctype html>
+<!--
+  ============================================================================
+  STRONA PRODUKTU I WITRYNA ORGANIZACJI — https://ddmobile.pl
+
+  (Komentarze w tym pliku są po polsku celowo: to notatki dla Ciebie, nie
+  treść dla użytkownika. Treść strony jest po angielsku, bo czyta ją recenzent
+  Google i użytkownicy z dziewięciu rynków — patrz docs/hosting.md.)
+
+  Stan na 5 września 2026 — zrobione:
+
+  - domena `ddmobile.pl` podpięta do repozytorium `darekddev.github.io`
+    (Settings → Pages → Custom domain), certyfikat HTTPS wystawiony,
+  - własność domeny **zweryfikowana w Search Console rekordem TXT w DNS**,
+    czyli metodą domenową: obejmuje http i https, www i wszystkie subdomeny.
+    Dlatego w <head> NIE MA i nie potrzeba znacznika
+    `google-site-verification` — ta metoda go nie używa,
+  - nazwa wydawcy i adres kontaktowy wpisane w stopce.
+
+  14 X 2026: strona AirFry przeniesiona z głównej na /airfry/ — na głównej są
+  kafelki wszystkich aplikacji. Przycisk prowadzi już do wpisu w Google Play.
+  Polityka prywatności i app-ads.txt zostają w katalogu głównym:
+    https://ddmobile.pl/airfry/       ta strona
+    https://ddmobile.pl/privacy.html  polityka prywatności AirFry
+    https://ddmobile.pl/app-ads.txt   autoryzowani sprzedawcy AdMob
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AirFry: Air Fryer Companion</title>
+<meta name="description" content="AirFry: 100+ air fryer recipes with temperature and time, and a timer that tells you when to turn the food. Works offline, no account.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="AirFry: Air Fryer Companion">
+<meta property="og:description" content="100+ recipes with temperature and time. A timer that says when to turn. Works offline.">
+<meta property="og:image" content="../img/icon-512.png">
+
+<link rel="icon" href="../img/icon-512.png">
+
+<style>
+  /* Paleta wzięta z aplikacji (ui/theme/Theme.kt), żeby strona i produkt
+     wyglądały jak jedna rzecz, a nie dwie. */
+  :root {
+    --ember: #E0621B;
+    --ember-soft: #FFE0CC;
+    --charcoal: #1C1917;
+    --cream: #FBF7F2;
+    --surface: #F2E7DE;
+    --muted: #52443C;
+    --outline: #D8C7BC;
+    --measure: 65ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- nagłówek ---------- */
+
+  header { padding: 28px 0 40px; }
+
+  .home { margin: 0 0 28px; font-size: 15px; }
+  .home a { color: var(--muted); }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand img {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+  }
+
+  .brand h1 {
+    /* Człon po dwukropku lżejszy: to podtytuł ze sklepu, nie marka. */
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+  }
+
+  .brand h1 span {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .lead {
+    max-width: var(--measure);
+    margin: 28px 0 0;
+    font-size: 21px;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .store {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 26px;
+    background: var(--ember);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .store:hover { background: #c65516; }
+
+  .store-note {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- zrzuty ---------- */
+
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    margin: 48px 0 8px;
+  }
+
+  .shots figure { margin: 0; }
+
+  .shots img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--outline);
+    border-radius: 18px;
+  }
+
+  .shots figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- funkcje ---------- */
+
+  section { padding: 44px 0; }
+
+  h2 {
+    font-size: 15px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features li {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px 22px;
+  }
+
+  .features strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .features span {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* ---------- prywatność ---------- */
+
+  .privacy {
+    background: var(--ember-soft);
+    border-radius: 20px;
+    padding: 28px 28px 24px;
+  }
+
+  .privacy h2 { color: #7a2d00; }
+
+  .privacy p {
+    max-width: var(--measure);
+    margin: 0 0 12px;
+  }
+
+  .privacy a { color: #8f3400; }
+
+  /* ---------- stopka ---------- */
+
+  footer {
+    border-top: 1px solid var(--outline);
+    margin-top: 32px;
+    padding: 32px 0 56px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--muted); }
+
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream: #17130F;
+      --charcoal: #F5EDE6;
+      --surface: #2A211B;
+      --muted: #C7B4A7;
+      --outline: #4A3B33;
+      --ember-soft: #45210B;
+    }
+    .privacy h2 { color: #FFB183; }
+    .privacy a { color: #FFB183; }
+    .store { color: #17130F; background: #FF9052; }
+    .store:hover { background: #ffa571; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="home"><a href="../">← ddmobile.pl</a></p>
+    <div class="brand">
+      <img src="../img/icon-512.png" alt="AirFry app icon">
+      <!--
+        Pełna nazwa ze sklepu, nie skrócona. Pod ikoną na telefonie stoi samo
+        „AirFry" (`app_name` w res/values/strings.xml), bo launcher ucina
+        etykietę po kilkunastu znakach — ale strona ma się zgadzać z WPISEM
+        W SKLEPIE, bo to jego recenzent porównuje z witryną. Tak samo robi
+        Google: w sklepie „Google Chrome: Fast & Secure", pod ikoną „Chrome".
+      -->
+      <div>
+        <h1>AirFry<span>: Air Fryer Companion</span></h1>
+        <p>Air fryer recipes and timer</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      More than a hundred recipes with temperature, time and ingredients — and a
+      timer that tells you when to turn the food, shake the basket or add the
+      cheese. Recipes, timer, calculator and shopping list all work with no
+      internet.
+    </p>
+
+    <a class="store" href="https://play.google.com/store/apps/details?id=pl.airfry.app">Get it on Google Play</a>
+    <p class="store-note">Android 8.0 or newer.</p>
+
+    <div class="shots">
+      <figure>
+        <img src="../img/przepis.jpg" alt="Recipe screen showing a photo of the dish, temperature, cooking time and the ingredient list">
+        <figcaption>Every recipe carries its temperature, time and a photo — shipped inside the app, not downloaded.</figcaption>
+      </figure>
+      <figure>
+        <img src="../img/minutnik.jpg" alt="Running timer with a reminder of what to do next">
+        <figcaption>The timer does more than count down — it says what to do, and when.</figcaption>
+      </figure>
+      <figure>
+        <img src="../img/lista.jpg" alt="Recipe list in the meat and poultry category">
+        <figcaption>Ten categories, search by ingredient, and an “under 20 minutes” filter.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section>
+    <h2>What is inside</h2>
+    <ul class="features">
+      <li>
+        <strong>100+ recipes</strong>
+        <span>Meat, fish, vegetables, potatoes, bakes, breakfast, snacks,
+        desserts and reheating. Each with temperature, time, ingredients and
+        steps.</span>
+      </li>
+      <li>
+        <strong>A timer that tells you what to do</strong>
+        <span>It reminds you to turn the food and shake the basket partway
+        through. It rings at alarm volume, so you hear it over running water,
+        and keeps counting after you leave the app.</span>
+      </li>
+      <li>
+        <strong>Oven-to-air-fryer calculator</strong>
+        <span>The packaging only gives oven settings? Enter its temperature and
+        time and get the air fryer equivalent.</span>
+      </li>
+      <li>
+        <strong>A shopping list that merges</strong>
+        <span>Two recipes with onion give you one line, not two. Ticked items
+        drop to the bottom so you can see what is already in the basket.</span>
+      </li>
+      <li>
+        <strong>Weekly plan</strong>
+        <span>Assign recipes to days, then turn the whole week into a single
+        shopping list with one tap.</span>
+      </li>
+      <li>
+        <strong>Nine languages, two temperature scales</strong>
+        <span>English, Polish, German, French, Spanish, Portuguese, Italian,
+        Dutch and Chinese — the ingredients, steps and tips are translated too,
+        not just the interface. Celsius or Fahrenheit.</span>
+      </li>
+      <li>
+        <strong>Your own recipes and notes</strong>
+        <span>Add your own, write a note on a built-in recipe as well, mark
+        favourites and group them into collections.</span>
+      </li>
+      <li>
+        <strong>Works offline</strong>
+        <span>Recipes, the timer, the calculator and the shopping list all work
+        in aeroplane mode. No account, no sign-in.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="privacy">
+      <h2>Privacy, without asterisks</h2>
+      <p>
+        The app has no server and never sends anywhere what you cook. Your
+        recipes, notes, shopping list and weekly plan stay on your phone —
+        there is no account, no sign-in and no analytics.
+      </p>
+      <p>
+        The internet is needed only for the ads that pay for the app. If you
+        would rather not see them, a one-time purchase removes them from every
+        screen. No subscription.
+      </p>
+      <p>
+        <a href="../privacy.html">Full privacy policy</a> — exactly what the ad
+        SDK collects, how to withdraw consent and how to reset your advertising
+        identifier.
+      </p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <!--
+      Adresu siedziby tu NIE MA i nie musi być. Weryfikacja witryny w Search
+      Console sprawdza wyłącznie, czy panujesz nad domeną (tag w <head>), a
+      dane firmy Google bierze z Play Console, nie stąd.
+
+      Zostają nazwa i e-mail: recenzent porównuje nazwę z kontem w Play
+      Console, a e-mail jest jedynym kanałem kontaktu poza sklepem.
+
+      Gdybyś kiedyś chciał dopisać adres — na przykład przy sprzedaży poza
+      Google Play, gdzie sprzedawcą przestaje być Google — wstaw wiersz
+      między nazwę a kontakt.
+    -->
+    <p>
+      <strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a>
+    </p>
+    <p>
+      <a href="../privacy.html">Privacy policy</a>
+    </p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
