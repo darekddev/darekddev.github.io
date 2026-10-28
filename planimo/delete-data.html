@@ -1,0 +1,272 @@
+<!doctype html>
+<!--
+  Usuwanie danych Planimo (repo rodzina, pakiet pl.ddmobile.rodzina).
+  Ten adres idzie do Play Console (Bezpieczeństwo danych → prośba o usunięcie):
+  https://ddmobile.pl/planimo/delete-data.html
+  Trzy języki jak w privacy.html. Termin „do 30 dni" to obietnica autora —
+  zmieniając go, popraw wszystkie trzy wersje i datę.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planimo — Delete your data</title>
+<meta name="description" content="How to delete your data in Planimo — Family Planner: data on the phone, the optional shared list and plan in Google Firebase, and advertising data. English, Polish and German.">
+<link rel="icon" href="img/icon-512.png">
+<style>
+  :root {
+    --accent: #3B6FB0;
+    --ink: #1B1C18;
+    --paper: #F8F7F2;
+    --surface: #EEEFE7;
+    --muted: #4A5048;
+    --outline: #D2D6CC;
+    --link: #2D5A93;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 68ch;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+  }
+
+  a { color: var(--link); }
+
+  .brand { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; }
+  .brand img { width: 56px; height: 56px; border-radius: 14px; }
+  .brand span { font-size: 22px; font-weight: 600; }
+
+  h1 { font-size: 30px; letter-spacing: -0.02em; margin: 0 0 6px; }
+
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+
+  .langs { font-size: 15px; }
+
+  h2 {
+    margin: 48px 0 8px;
+    font-size: 24px;
+    border-top: 1px solid var(--outline);
+    padding-top: 28px;
+  }
+
+  h3 { margin: 32px 0 6px; font-size: 19px; }
+
+  p, li { max-width: 68ch; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--outline);
+    vertical-align: top;
+  }
+
+  th { background: var(--surface); font-weight: 600; }
+
+  code {
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .short {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 4px 22px 18px;
+    margin: 20px 0 0;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--outline);
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131411;
+      --ink: #E9EAE3;
+      --surface: #22241F;
+      --muted: #BFC4BA;
+      --outline: #3A3D36;
+      --link: #9CC2F2;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="brand"><img src="img/icon-512.png" alt=""><span>Planimo</span></p>
+
+  <h1>Delete your data</h1>
+  <p class="updated">Planimo — Family Planner, by Dariusz Drozd (ddmobile) · Last updated: 2026-10-29</p>
+  <p class="langs"><a href="#english">English</a> · <a href="#polski">Polski</a> · <a href="#deutsch">Deutsch</a></p>
+
+  <!-- ===================================================================== -->
+  <h2 id="english">English</h2>
+
+  <p>Planimo has no accounts: we never learn your name, e-mail or phone number.
+    What can be deleted, and how:</p>
+
+  <h3>1. Data on your phone</h3>
+  <p>The shopping list, “My lists”, favourites, the people and activities in
+    your plan, reminders and settings live only on your phone. Delete items in
+    the app, or uninstall Planimo — uninstalling deletes all of it at once.</p>
+
+  <h3>2. The shared list and plan (only if you paired phones)</h3>
+  <p>If you used <em>Settings → Shared list and plan</em>, the shopping list,
+    “My lists”, people (names and colours), activities and their one-day changes
+    are stored in Google Firebase together with a random, anonymous phone
+    identifier.</p>
+  <ol>
+    <li><strong>Stop sharing from one phone:</strong> Settings → Shared list and
+      plan → Code and phones → <strong>Disconnect this phone</strong>. The phone
+      keeps a local copy and stops syncing; other paired phones keep the shared
+      copy.</li>
+    <li><strong>Delete the shared list from the server:</strong> e-mail
+      <a href="mailto:darekddev@gmail.com?subject=Planimo%20-%20delete%20shared%20list">darekddev@gmail.com</a>
+      with the subject “Planimo – delete shared list” and the
+      <strong>8-character share code</strong> (shown under Settings → Shared list
+      and plan). The code is the only way to find a list, because we hold no
+      names or e-mails.</li>
+  </ol>
+  <p><strong>What is deleted:</strong> the whole shared list and plan for that
+    code — shopping list, “My lists”, people, activities, one-day changes — and
+    the anonymous identifiers of the phones that joined it.
+    <strong>What is kept:</strong> nothing on our side.
+    <strong>When:</strong> within 30 days of your e-mail; we reply when it is done.
+    Phones that were paired keep their own local copy until you delete it there.</p>
+
+  <h3>3. Advertising data (Google AdMob)</h3>
+  <p>The free version shows ads from Google AdMob, which uses your device's
+    advertising identifier. We do not receive or store this data. You can delete
+    or reset the advertising identifier in Android: Settings → Privacy → Ads, and
+    Google handles AdMob data under its own
+    <a href="https://policies.google.com/privacy">privacy policy</a>. Planimo
+    Premium removes ads completely.</p>
+
+  <p>More details: <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <!-- ===================================================================== -->
+  <h2 id="polski">Polski</h2>
+
+  <p>Planimo nie ma kont: nie znamy Twojego imienia, e-maila ani numeru
+    telefonu. Co można usunąć i jak:</p>
+
+  <h3>1. Dane w telefonie</h3>
+  <p>Lista zakupów, „Moje listy”, ulubione, osoby i zajęcia w planie,
+    przypomnienia i ustawienia są tylko w telefonie. Usuń je w aplikacji albo
+    odinstaluj Planimo — odinstalowanie usuwa wszystko naraz.</p>
+
+  <h3>2. Wspólna lista i plan (tylko jeśli połączono telefony)</h3>
+  <p>Jeśli korzystasz z <em>Ustawienia → Wspólna lista i plan</em>, lista
+    zakupów, „Moje listy”, osoby (imiona i kolory), zajęcia i ich jednodniowe
+    zmiany są zapisane w Google Firebase razem z losowym, anonimowym
+    identyfikatorem telefonu.</p>
+  <ol>
+    <li><strong>Wyłączenie wspólnej listy na jednym telefonie:</strong> Ustawienia
+      → Wspólna lista i plan → Kod i telefony → <strong>Odłącz ten telefon</strong>.
+      Telefon zachowuje kopię u siebie i przestaje się synchronizować; pozostałe
+      telefony mają dalej wspólną kopię.</li>
+    <li><strong>Usunięcie wspólnej listy z serwera:</strong> napisz na
+      <a href="mailto:darekddev@gmail.com?subject=Planimo%20-%20usuniecie%20wspolnej%20listy">darekddev@gmail.com</a>
+      z tematem „Planimo – usunięcie wspólnej listy” i podaj
+      <strong>8-znakowy kod</strong> (widać go w Ustawienia → Wspólna lista i
+      plan). Kod to jedyny sposób na odnalezienie listy, bo nie mamy imion ani
+      e-maili.</li>
+  </ol>
+  <p><strong>Co usuwamy:</strong> całą wspólną listę i plan dla tego kodu —
+    listę zakupów, „Moje listy”, osoby, zajęcia, zmiany jednodniowe — oraz
+    anonimowe identyfikatory telefonów, które do niej dołączyły.
+    <strong>Co zostaje:</strong> u nas nic.
+    <strong>Kiedy:</strong> do 30 dni od e-maila; odpiszemy, gdy będzie gotowe.
+    Połączone telefony zachowują własną kopię, dopóki jej tam nie usuniesz.</p>
+
+  <h3>3. Dane reklamowe (Google AdMob)</h3>
+  <p>Darmowa wersja pokazuje reklamy Google AdMob, które korzystają
+    z identyfikatora reklamowego urządzenia. Nie otrzymujemy tych danych i ich
+    nie przechowujemy. Identyfikator możesz usunąć lub zresetować w Androidzie:
+    Ustawienia → Prywatność → Reklamy, a danymi AdMob zarządza Google według
+    swojej <a href="https://policies.google.com/privacy?hl=pl">polityki prywatności</a>.
+    Planimo Premium całkiem wyłącza reklamy.</p>
+
+  <p>Więcej: <a href="privacy.html#polski">Polityka prywatności</a>.</p>
+
+  <!-- ===================================================================== -->
+  <h2 id="deutsch">Deutsch</h2>
+
+  <p>Planimo hat keine Konten: Wir kennen weder deinen Namen noch deine
+    E-Mail-Adresse oder Telefonnummer. Was sich löschen lässt und wie:</p>
+
+  <h3>1. Daten auf deinem Handy</h3>
+  <p>Einkaufsliste, „Meine Listen“, Favoriten, Personen und Termine im Plan,
+    Erinnerungen und Einstellungen liegen nur auf deinem Handy. Lösche Einträge
+    in der App oder deinstalliere Planimo — beim Deinstallieren wird alles auf
+    einmal gelöscht.</p>
+
+  <h3>2. Gemeinsame Liste und Plan (nur wenn Handys verbunden sind)</h3>
+  <p>Wenn du <em>Einstellungen → Gemeinsame Liste und Plan</em> nutzt, werden
+    Einkaufsliste, „Meine Listen“, Personen (Namen und Farben), Termine und ihre
+    Änderungen für einzelne Tage in Google Firebase gespeichert, zusammen mit
+    einer zufälligen, anonymen Kennung des Handys.</p>
+  <ol>
+    <li><strong>Teilen auf einem Handy beenden:</strong> Einstellungen →
+      Gemeinsame Liste und Plan → Code und Handys → <strong>Dieses Handy
+      trennen</strong>. Das Handy behält eine eigene Kopie und synchronisiert
+      nicht mehr; die anderen Handys behalten die gemeinsame Kopie.</li>
+    <li><strong>Gemeinsame Liste vom Server löschen:</strong> Schreib an
+      <a href="mailto:darekddev@gmail.com?subject=Planimo%20-%20gemeinsame%20Liste%20loeschen">darekddev@gmail.com</a>
+      mit dem Betreff „Planimo – gemeinsame Liste löschen“ und nenne den
+      <strong>8-stelligen Code</strong> (zu sehen unter Einstellungen →
+      Gemeinsame Liste und Plan). Nur über den Code finden wir die Liste, denn
+      wir speichern keine Namen oder E-Mail-Adressen.</li>
+  </ol>
+  <p><strong>Was gelöscht wird:</strong> die gesamte gemeinsame Liste und der
+    Plan zu diesem Code — Einkaufsliste, „Meine Listen“, Personen, Termine,
+    Tagesänderungen — sowie die anonymen Kennungen der beigetretenen Handys.
+    <strong>Was bleibt:</strong> bei uns nichts.
+    <strong>Wann:</strong> innerhalb von 30 Tagen nach deiner E-Mail; wir
+    antworten, sobald es erledigt ist. Verbundene Handys behalten ihre eigene
+    Kopie, bis du sie dort löschst.</p>
+
+  <h3>3. Werbedaten (Google AdMob)</h3>
+  <p>Die kostenlose Version zeigt Werbung von Google AdMob, die die
+    Werbe-ID des Geräts verwendet. Wir erhalten und speichern diese Daten nicht.
+    Du kannst die Werbe-ID in Android löschen oder zurücksetzen: Einstellungen →
+    Datenschutz → Werbung; AdMob-Daten verwaltet Google nach seiner
+    <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung</a>.
+    Planimo Premium entfernt die Werbung vollständig.</p>
+
+  <p>Mehr dazu: <a href="privacy.html#deutsch">Datenschutzerklärung</a>.</p>
+
+  <footer>
+    <p>Dariusz Drozd (ddmobile) — <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
