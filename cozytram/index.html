@@ -1,0 +1,137 @@
+<!doctype html>
+<!--
+  Strona gry Cozy Tram Simulator (pakiet com.cozy.tram) — https://ddmobile.pl/cozytram/
+  Treść po angielsku, jak wpis w Google Play (cozy-tram/docs/store-listing.md), ale bez liczby miast — kolejne miasta
+  dojdą w aktualizacjach. Polityka prywatności obok: /cozytram/privacy.html (adres wpisany w Play Console).
+  Obrazki: img/ (ikona, grafika 1024 × 500, zrzuty 1920 × 1080 z cozy-tram/build/sklep zmniejszone do 1280 px).
+  Jasna, kremowa kolorystyka jak w grze (wspólne games.css jest ciemne — zmienne nadpisane niżej).
+  Po wydaniu w Google Play: zamienić <span class="store"> na odnośnik
+  https://play.google.com/store/apps/details?id=com.cozy.tram z napisem „Get it on Google Play”.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cozy Tram Simulator</title>
+<meta name="description" content="Cozy Tram Simulator — a relaxing tram game with no crashes and no game over: passengers, switches, every season by day or night, a lively pastel town and your own tram depot. Coming soon to Google Play.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cozy Tram Simulator">
+<meta property="og:description" content="Drive a cozy tram through pastel cities: passengers, switches, seasons and a bell!">
+<meta property="og:image" content="https://ddmobile.pl/cozytram/img/feature.jpg">
+<link rel="icon" href="img/icon-512.png">
+<link rel="stylesheet" href="../games.css">
+<style>
+  :root {
+    --bg: #fbf4ea;
+    --panel: #fffaf3;
+    --panel-2: #f6e9da;
+    --text: #4a3b36;
+    --muted: #76625b;
+    --accent: #b8435e;
+    --accent-ink: #ffffff;
+    --outline: #ead8c6;
+  }
+  .brand h1 { text-transform: none; letter-spacing: 0; }
+  .brand h1 span { color: #d9607a; }
+  .store { cursor: default; }
+  .store:hover { filter: none; }
+  .features li { box-shadow: 0 2px 10px rgba(122, 74, 82, 0.06); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="home"><a href="../">← ddmobile.pl</a></p>
+
+  <header class="hero">
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Cozy Tram Simulator app icon">
+      <div>
+        <h1>Cozy <span>Tram</span> Simulator</h1>
+        <p>A relaxing tram ride through pastel cities</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Ring the bell, close the doors and roll gently through a pastel little town. No crashes and no game over —
+      just you, your tram and passengers who want to get home.
+    </p>
+
+    <span class="store">Coming soon to Google Play</span>
+    <p class="store-note">Free · Android</p>
+
+    <img class="feature-art" src="img/feature.jpg" width="1024" height="500"
+         alt="Cozy Tram Simulator key art: a brown tram by a tram stop in a green pastel town">
+  </header>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/ride.jpg" width="1280" height="720" loading="lazy" alt="A tram on a tree-lined track in a sunny town, with the STOP lever in the corner">
+        <figcaption>A sunny morning in Wrocław: set the lever to STOP and the tram glides up to the platform.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/tokyo-night.jpg" width="1280" height="720" loading="lazy" alt="A tram with its headlights on in a city at night">
+        <figcaption>The night shift in Tokyo: headlights, street lamps and glowing signs.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/winter.jpg" width="1280" height="720" loading="lazy" alt="A snowy old town square at night with a lit Christmas tree">
+        <figcaption>Winter nights: snow on the roofs and a Christmas tree full of lights.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/autumn.jpg" width="1280" height="720" loading="lazy" alt="A tram in light autumn rain approaching the Trocadéro stop">
+        <figcaption>Autumn in Paris: light rain, puddles and falling leaves.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/map.jpg" width="1280" height="720" loading="lazy" alt="City selection screen with city cards">
+        <figcaption>Pick a city, then a district — and the season and time of day you like.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/depot.jpg" width="1280" height="720" loading="lazy" alt="A tram inside a cozy wooden depot with a cat and a puppy">
+        <figcaption>Your own depot: wash the tram, feed the pets and get ready to depart.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shop.jpg" width="1280" height="720" loading="lazy" alt="Depot shop list of tram bells with play buttons">
+        <figcaption>Bells for every taste — from a classic ding-ding to a kitten's meow.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>What is inside</h2>
+    <ul class="features">
+      <li><strong>Drive at your own pace</strong>
+        <span>Set the switches ahead of the tram and pick the right track to every stop. Open the doors at the platform, let everyone board and ring the bell before you leave.</span></li>
+      <li><strong>Passengers and special guests</strong>
+        <span>Passengers wear the color and shape of their stop. Guests ask for small favors: grandma wants a gentle ride, a tourist wants the scenic detour, a little boy wants you to ring the bell.</span></li>
+      <li><strong>Cities around the world</strong>
+        <span>Wrocław, Prague, Paris, Rome, Lisbon, San Francisco and Tokyo — cobbled old towns, river quays, hills, cable cars, neon streets and cherry trees. More cities are on the way.</span></li>
+      <li><strong>Every season, day and night</strong>
+        <span>Spring, summer, autumn or winter for any district, by day or on the night shift. Falling leaves and puddles, snowmen on the tracks, kids throwing snowballs and Santa with his sack.</span></li>
+      <li><strong>A lively town</strong>
+        <span>Ducks nap on the rails, a busker plays by the passing loop, kids wave from the pavement and people sip coffee at little cafés. Ring the bell and the town answers.</span></li>
+      <li><strong>Your own depot</strong>
+        <span>Wash your tram with a sponge, a hose or the automatic car wash, pet the depot cat and dog, and spend coins on new trams, paint, decorations, hats and bells.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="note">
+      <h2>Free, with ads</h2>
+      <p>The game is free and shows ads: small banners on the city and district maps and on the ride summary, and optional rewarded videos you choose to watch (double coins). A one-time Full Version removes all ads and unlocks the whole depot shop.</p>
+      <p>No account needed. Languages: English, Polish, German, Czech, French, Spanish, Portuguese, Italian and Japanese.</p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+    <p><a href="../">All apps</a> · <a href="privacy.html">Privacy policy</a></p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
