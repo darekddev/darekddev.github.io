@@ -1,0 +1,730 @@
+<!doctype html>
+<!--
+  Polityka prywatności Planimo (repo rodzina, pakiet pl.ddmobile.rodzina).
+  Ten adres idzie do Play Console: https://ddmobile.pl/planimo/privacy.html
+
+  Trzy języki, bo tyle ma aplikacja: angielski pierwszy (recenzent Google,
+  lang="en"), potem polski i niemiecki — RODO wymaga informacji „prostym
+  językiem", a najprostszy jest język użytkownika.
+
+  Przy każdej zmianie w aplikacji, która dotyka danych (nowa biblioteka,
+  uprawnienie, usługa), popraw wszystkie trzy wersje i datę na górze.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planimo — Family Planner — Privacy Policy</title>
+<meta name="description" content="Planimo privacy policy: what stays on your phone, what the optional shared list and plan store in Google Firebase, what the Google AdMob SDK collects, and how to withdraw consent. English, Polish and German.">
+<link rel="icon" href="img/icon-512.png">
+<style>
+  :root {
+    --accent: #3B6FB0;
+    --ink: #1B1C18;
+    --paper: #F8F7F2;
+    --surface: #EEEFE7;
+    --muted: #4A5048;
+    --outline: #D2D6CC;
+    --link: #2D5A93;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 68ch;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+  }
+
+  a { color: var(--link); }
+
+  .brand { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; }
+  .brand img { width: 56px; height: 56px; border-radius: 14px; }
+  .brand span { font-size: 22px; font-weight: 600; }
+
+  h1 { font-size: 30px; letter-spacing: -0.02em; margin: 0 0 6px; }
+
+  .updated { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+
+  .langs { font-size: 15px; }
+
+  h2 {
+    margin: 48px 0 8px;
+    font-size: 24px;
+    border-top: 1px solid var(--outline);
+    padding-top: 28px;
+  }
+
+  h3 { margin: 32px 0 6px; font-size: 19px; }
+
+  p, li { max-width: 68ch; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--outline);
+    vertical-align: top;
+  }
+
+  th { background: var(--surface); font-weight: 600; }
+
+  code {
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .short {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 4px 22px 18px;
+    margin: 20px 0 0;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--outline);
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131411;
+      --ink: #E9EAE3;
+      --surface: #22241F;
+      --muted: #BFC4BA;
+      --outline: #3A3D36;
+      --link: #9CC2F2;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="brand"><img src="img/icon-512.png" alt=""><span>Planimo</span></p>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 2026-10-28</p>
+  <p class="langs"><a href="#english">English</a> · <a href="#polski">Polski</a> · <a href="#deutsch">Deutsch</a></p>
+
+  <!-- ===================================================================== -->
+  <h2 id="english">English</h2>
+
+  <div class="short">
+    <h3>The short version</h3>
+    <p>
+      <strong>On its own, Planimo keeps everything on your phone.</strong> Your
+      shopping list, regular lists, favourites, the people in your plan, the
+      kids' activities and the reminders live in a local database. No account,
+      no sign-in.
+    </p>
+    <p>
+      <strong>Sharing is optional.</strong> If you pair phones to share the
+      shopping list and plan with your family, that list and plan are stored in
+      Google Firebase so every paired phone can see them. Until you create or
+      join a shared list, nothing from your list or plan leaves the phone.
+    </p>
+    <p>
+      <strong>The ads collect something.</strong> The free version shows ads
+      from Google AdMob, and that SDK reads your device's advertising identifier.
+      You can limit this by withdrawing consent, or remove it by buying Planimo
+      Premium.
+    </p>
+  </div>
+
+  <h3>What the app stores on your device</h3>
+  <ul>
+    <li>The shopping list, your regular lists (“My lists”) and favourite products</li>
+    <li>The plan: the people you add (a name you choose and a colour), activities
+      (name, day, time, note, who is in charge, reminder), and one-off changes
+      such as “cancelled this week”</li>
+    <li>Which person is “me” on this phone — this choice is never shared</li>
+    <li>Settings: language, dark mode, week or month view</li>
+    <li>Whether you bought Premium, and two counters used to decide when to ask
+      for a rating</li>
+  </ul>
+  <p>
+    All of it lives in a local database and local preferences. Uninstalling the
+    app deletes all of it. The built-in product catalogue ships inside the app.
+  </p>
+
+  <h3>Shared list and plan (Google Firebase) — only if you pair phones</h3>
+  <p>
+    In <strong>Settings → Shared list and plan</strong> you can create a shared
+    list or join one with an 8-character code or QR code. When you do:
+  </p>
+  <ul>
+    <li>The shopping list, “My lists”, the people in the plan (names and
+      colours), the activities and their one-day changes are stored in
+      <strong>Google Cloud Firestore</strong> (Firebase), in the
+      <code>europe-central2</code> region (Warsaw, Poland).</li>
+    <li>The phone signs in to Firebase <strong>anonymously</strong>: Firebase
+      gives it a random identifier. We never learn your name, e-mail or phone
+      number. Connecting to Firebase also means Google processes the phone's IP
+      address, as with any internet service.</li>
+    <li>Only phones that joined with the code can read or change the shared
+      data. The code is the invitation — share it only with people you want in
+      your list and plan.</li>
+    <li>Favourites, the “me” choice and your settings stay on each phone and
+      are not shared.</li>
+  </ul>
+  <p>
+    <strong>Leaving.</strong> “Disconnect this phone” keeps a copy of the list
+    and plan on your phone and stops syncing. The other phones keep the shared
+    copy. To have a shared list removed from the server completely, write to
+    us (contact below) and include its code.
+  </p>
+  <p>
+    Firebase is provided by Google, which processes this data on our behalf:
+    <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.
+  </p>
+
+  <h3>QR code scanner</h3>
+  <p>
+    Scanning a pairing QR code uses the Google Play services code scanner. It
+    runs inside Google Play services, which handles the camera; Planimo only
+    receives the decoded code and has no camera permission of its own.
+  </p>
+
+  <h3>Reminders</h3>
+  <p>
+    Activity reminders are worked out on your phone and scheduled with the
+    Android alarm system. No server is involved. On a shared plan, each phone
+    calculates its own reminders from the shared activities.
+  </p>
+
+  <h3>Advertising (Google AdMob)</h3>
+  <p>
+    The free version shows banner ads at the bottom of the shopping list, “My
+    lists” and the planner, and native ads between products in the catalogue.
+    They are served by <strong>Google AdMob</strong>. To do that, the AdMob SDK
+    can collect and send to Google:
+  </p>
+  <ul>
+    <li>your device's <strong>advertising identifier</strong> (a resettable ID,
+      not your name)</li>
+    <li><strong>approximate location</strong>, which Google derives from your IP
+      address</li>
+    <li><strong>ad interactions</strong> — that an ad was shown, and whether it
+      was tapped</li>
+    <li><strong>diagnostics</strong> about the SDK's own errors</li>
+  </ul>
+  <p>
+    The app never sends your list, plan, people or activities to the ad SDK.
+    Google is an independent controller of the ad data. Its policies:
+  </p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses data from apps that use its services</a></li>
+  </ul>
+  <p>
+    <strong>Consent.</strong> In the EEA, the UK and Switzerland the app shows a
+    Google-certified consent form the first time it runs. If you decline
+    personalised ads, you still see ads, but non-personalised ones. You can
+    change your mind at any time in <strong>Settings → Ad privacy
+    settings</strong>.
+  </p>
+  <p>
+    <strong>US state privacy rights.</strong> We do not sell personal
+    information for money. Under the laws of California and several other US
+    states, showing a personalised ad can count as “sharing” data for targeted
+    advertising. Where those rules apply you can opt out in
+    <strong>Settings → Ad privacy settings</strong>; opting out removes the
+    targeting, not the ads.
+  </p>
+  <p>
+    <strong>Resetting the identifier.</strong> Android lets you reset or delete
+    the advertising ID: Settings → Privacy → Ads (the exact path varies by
+    manufacturer).
+  </p>
+
+  <h3>Planimo Premium (Google Play Billing)</h3>
+  <p>
+    Premium is a one-time purchase handled by <strong>Google Play</strong>: no
+    ads and no limit on “My lists”. We never see your payment details — the app
+    only learns whether Premium is owned. The purchase is tied to your Google
+    account, so it returns after a reinstall. With Premium the app requests no
+    ads and shows no consent form.
+  </p>
+
+  <h3>Rating the app</h3>
+  <p>
+    From time to time the app may open Google Play's own rating window. Google
+    shows it and handles your rating; the app sends nothing and receives
+    nothing back.
+  </p>
+
+  <h3>Permissions and why they exist</h3>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>the shared list and plan, ads and the purchase</td></tr>
+    <tr><td><code>AD_ID</code></td><td>lets the ad SDK read the advertising identifier</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>activity reminders</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>reminders arrive on the minute rather than a few minutes late</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>reminders are set again after the phone restarts</td></tr>
+    <tr><td><code>BILLING</code></td><td>buying Premium in Google Play</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>added by Google's libraries for background work</td></tr>
+  </table>
+  <p>There is no location, contacts, microphone or camera permission.</p>
+
+  <h3>No analytics, no crash reporting</h3>
+  <p>
+    Beyond the ad SDK and the optional Firebase sync described above, the app
+    contains no analytics SDK and no crash-reporting SDK. Nobody — including the
+    developer — receives information about how you use the app.
+  </p>
+
+  <h3>Android backup</h3>
+  <p>
+    Android's own backup (Settings → Google → Backup) may copy this app's data
+    to <em>your</em> Google Drive, encrypted, along with your other apps. This is
+    a platform feature, not something the app sends: the data goes to your own
+    Google account, and only if backup is switched on. You can turn it off in
+    Android settings.
+  </p>
+
+  <h3>Your rights</h3>
+  <p>
+    Data on your phone is under your control: delete items in the app or
+    uninstall it. For the shared list and plan stored in Firebase you can ask us
+    for access or deletion — write to the address below and include the share
+    code, because the code is the only way to find a list (we hold no names or
+    e-mails). You also have the right to complain to your data protection
+    authority (in Poland: UODO).
+  </p>
+
+  <h3>Children</h3>
+  <p>
+    Planimo is made for parents and other adults who organise children's
+    activities. It is not directed at children, is not part of the Designed for
+    Families programme and contains ads.
+  </p>
+
+  <h3>Changes</h3>
+  <p>If this policy changes, the date at the top changes with it.</p>
+
+  <h3>Contact</h3>
+  <p>Dariusz Drozd (ddmobile) — <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+
+  <!-- ===================================================================== -->
+  <h2 id="polski">Polski</h2>
+
+  <div class="short">
+    <h3>W skrócie</h3>
+    <p>
+      <strong>Sama aplikacja trzyma wszystko w telefonie.</strong> Lista zakupów,
+      stałe listy, ulubione, osoby w planie, zajęcia dzieci i przypomnienia są
+      w lokalnej bazie danych. Bez konta i bez logowania.
+    </p>
+    <p>
+      <strong>Udostępnianie jest dobrowolne.</strong> Jeśli sparujesz telefony,
+      żeby dzielić listę zakupów i plan z rodziną, ta lista i plan są zapisywane
+      w Google Firebase, żeby widział je każdy sparowany telefon. Dopóki nie
+      założysz wspólnej listy albo do niej nie dołączysz, nic z listy ani planu
+      nie opuszcza telefonu.
+    </p>
+    <p>
+      <strong>Reklamy coś zbierają.</strong> Darmowa wersja wyświetla reklamy
+      Google AdMob, a ich SDK odczytuje identyfikator reklamowy urządzenia.
+      Możesz to ograniczyć, wycofując zgodę, albo wyłączyć, kupując Planimo
+      Premium.
+    </p>
+  </div>
+
+  <h3>Co aplikacja zapisuje w telefonie</h3>
+  <ul>
+    <li>Listę zakupów, stałe listy („Moje listy”) i ulubione produkty</li>
+    <li>Plan: dodane osoby (wybrane przez Ciebie imię i kolor), zajęcia (nazwa,
+      dzień, godzina, notatka, kto się zajmuje, przypomnienie) i zmiany jednego
+      dnia, np. „odwołane w tym tygodniu”</li>
+    <li>Którą osobą jesteś na tym telefonie („To ja”) — tego wyboru nigdy się
+      nie udostępnia</li>
+    <li>Ustawienia: język, tryb ciemny, widok tygodnia lub miesiąca</li>
+    <li>Czy kupiono Premium oraz dwa liczniki, od których zależy prośba o ocenę</li>
+  </ul>
+  <p>
+    Wszystko to leży w lokalnej bazie i ustawieniach. Odinstalowanie aplikacji
+    usuwa całość. Katalog produktów jest wbudowany w aplikację.
+  </p>
+
+  <h3>Wspólna lista i plan (Google Firebase) — tylko po sparowaniu telefonów</h3>
+  <p>
+    W <strong>Ustawienia → Wspólna lista i plan</strong> możesz założyć wspólną
+    listę albo dołączyć do niej 8-znakowym kodem lub kodem QR. Wtedy:
+  </p>
+  <ul>
+    <li>Lista zakupów, „Moje listy”, osoby w planie (imiona i kolory), zajęcia
+      i ich zmiany jednego dnia są zapisywane w <strong>Google Cloud
+      Firestore</strong> (Firebase), w regionie <code>europe-central2</code>
+      (Warszawa).</li>
+    <li>Telefon loguje się do Firebase <strong>anonimowo</strong>: Firebase
+      nadaje mu losowy identyfikator. Nie poznajemy Twojego imienia, e-maila ani
+      numeru telefonu. Połączenie z Firebase oznacza też, że Google przetwarza
+      adres IP telefonu, jak przy każdej usłudze internetowej.</li>
+    <li>Wspólne dane może czytać i zmieniać tylko telefon, który dołączył kodem.
+      Kod jest zaproszeniem — przekazuj go tylko osobom, które mają widzieć
+      listę i plan.</li>
+    <li>Ulubione, wybór „To ja” i ustawienia zostają w każdym telefonie i nie
+      są udostępniane.</li>
+  </ul>
+  <p>
+    <strong>Odłączenie.</strong> „Odłącz ten telefon” zostawia kopię listy
+    i planu w telefonie i kończy synchronizację. Pozostałe telefony zachowują
+    wspólną kopię. Jeśli chcesz, żeby wspólna lista zniknęła z serwera całkiem,
+    napisz do nas (kontakt niżej) i podaj jej kod.
+  </p>
+  <p>
+    Firebase dostarcza Google, które przetwarza te dane w naszym imieniu:
+    <a href="https://firebase.google.com/support/privacy">Prywatność i bezpieczeństwo w Firebase</a>.
+  </p>
+
+  <h3>Skaner kodów QR</h3>
+  <p>
+    Skanowanie kodu QR do parowania korzysta ze skanera Usług Google Play.
+    Działa on wewnątrz Usług Google Play, które obsługują aparat; Planimo
+    dostaje tylko odczytany kod i nie ma własnego uprawnienia do aparatu.
+  </p>
+
+  <h3>Przypomnienia</h3>
+  <p>
+    Przypomnienia o zajęciach są liczone w telefonie i ustawiane w systemowych
+    budzikach Androida, bez żadnego serwera. Przy wspólnym planie każdy telefon
+    liczy swoje przypomnienia ze wspólnych zajęć.
+  </p>
+
+  <h3>Reklamy (Google AdMob)</h3>
+  <p>
+    Darmowa wersja pokazuje banery na dole listy zakupów, „Moich list”
+    i planera oraz reklamy natywne między produktami w katalogu. Wyświetla je
+    <strong>Google AdMob</strong>. W tym celu SDK AdMob może zbierać
+    i przesyłać do Google:
+  </p>
+  <ul>
+    <li><strong>identyfikator reklamowy</strong> urządzenia (do zresetowania,
+      to nie Twoje imię)</li>
+    <li><strong>przybliżoną lokalizację</strong>, którą Google wyznacza
+      z adresu IP</li>
+    <li><strong>interakcje z reklamą</strong> — że reklama się wyświetliła i czy
+      ją kliknięto</li>
+    <li><strong>diagnostykę</strong> błędów samego SDK</li>
+  </ul>
+  <p>
+    Aplikacja nigdy nie przekazuje do SDK reklam Twojej listy, planu, osób ani
+    zajęć. Google jest niezależnym administratorem danych reklamowych. Jego
+    zasady:
+  </p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy?hl=pl">Polityka prywatności Google</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites?hl=pl">Jak Google wykorzystuje dane z aplikacji korzystających z jego usług</a></li>
+  </ul>
+  <p>
+    <strong>Zgoda.</strong> W EOG, Wielkiej Brytanii i Szwajcarii przy pierwszym
+    uruchomieniu aplikacja pokazuje certyfikowany przez Google formularz zgody.
+    Jeśli odmówisz reklam spersonalizowanych, nadal zobaczysz reklamy, ale
+    niespersonalizowane. Zdanie możesz zmienić w każdej chwili:
+    <strong>Ustawienia → Ustawienia prywatności reklam</strong>.
+  </p>
+  <p>
+    <strong>Reset identyfikatora.</strong> Android pozwala zresetować albo
+    usunąć identyfikator reklamowy: Ustawienia → Prywatność → Reklamy (dokładna
+    ścieżka zależy od producenta).
+  </p>
+
+  <h3>Planimo Premium (Google Play)</h3>
+  <p>
+    Premium to jednorazowy zakup obsługiwany przez <strong>Google
+    Play</strong>: bez reklam i bez limitu „Moich list”. Nie widzimy danych
+    płatności — aplikacja dowiaduje się tylko, czy Premium jest kupione. Zakup
+    jest przypisany do konta Google, więc wraca po ponownej instalacji. Z Premium
+    aplikacja nie pobiera reklam i nie pokazuje formularza zgody.
+  </p>
+
+  <h3>Ocena aplikacji</h3>
+  <p>
+    Od czasu do czasu aplikacja może otworzyć okno oceny Google Play. Pokazuje
+    je i obsługuje Google; aplikacja niczego nie wysyła i niczego nie dostaje.
+  </p>
+
+  <h3>Uprawnienia i po co są</h3>
+  <table>
+    <tr><th>Uprawnienie</th><th>Po co</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>wspólna lista i plan, reklamy i zakup</td></tr>
+    <tr><td><code>AD_ID</code></td><td>pozwala SDK reklam odczytać identyfikator reklamowy</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>przypomnienia o zajęciach</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>przypomnienie przychodzi co do minuty, a nie kilka minut później</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>po restarcie telefonu przypomnienia ustawiają się znowu</td></tr>
+    <tr><td><code>BILLING</code></td><td>zakup Premium w Google Play</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>dodają je biblioteki Google do pracy w tle</td></tr>
+  </table>
+  <p>Aplikacja nie ma uprawnień do lokalizacji, kontaktów, mikrofonu ani aparatu.</p>
+
+  <h3>Bez analityki i raportów awarii</h3>
+  <p>
+    Poza opisanym SDK reklam i dobrowolną synchronizacją przez Firebase
+    aplikacja nie ma SDK analitycznego ani raportowania awarii. Nikt — także
+    twórca — nie dostaje informacji o tym, jak korzystasz z aplikacji.
+  </p>
+
+  <h3>Kopia zapasowa Androida</h3>
+  <p>
+    Systemowa kopia zapasowa (Ustawienia → Google → Kopia zapasowa) może
+    kopiować dane tej aplikacji na <em>Twój</em> Dysk Google, zaszyfrowane,
+    razem z innymi aplikacjami. To funkcja Androida, nie wysyłka z aplikacji:
+    dane trafiają na Twoje własne konto Google i tylko wtedy, gdy kopia jest
+    włączona. Możesz ją wyłączyć w ustawieniach Androida.
+  </p>
+
+  <h3>Twoje prawa</h3>
+  <p>
+    Dane w telefonie są pod Twoją kontrolą: usuń pozycje w aplikacji albo ją
+    odinstaluj. W sprawie wspólnej listy i planu zapisanych w Firebase możesz
+    poprosić o dostęp lub usunięcie — napisz na adres poniżej i podaj kod listy,
+    bo tylko po kodzie da się ją znaleźć (nie mamy imion ani e-maili). Masz też
+    prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (UODO).
+  </p>
+
+  <h3>Dzieci</h3>
+  <p>
+    Planimo jest dla rodziców i innych dorosłych, którzy organizują zajęcia
+    dzieci. Nie jest skierowane do dzieci, nie należy do programu „Dla rodzin”
+    i zawiera reklamy.
+  </p>
+
+  <h3>Zmiany</h3>
+  <p>Jeśli polityka się zmieni, zmieni się też data na górze.</p>
+
+  <h3>Kontakt</h3>
+  <p>Dariusz Drozd (ddmobile) — <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+
+  <!-- ===================================================================== -->
+  <h2 id="deutsch">Deutsch</h2>
+
+  <div class="short">
+    <h3>Kurz gesagt</h3>
+    <p>
+      <strong>Von sich aus speichert Planimo alles auf deinem Handy.</strong>
+      Einkaufsliste, feste Listen, Favoriten, die Personen im Plan, die
+      Aktivitäten der Kinder und die Erinnerungen liegen in einer lokalen
+      Datenbank. Kein Konto, keine Anmeldung.
+    </p>
+    <p>
+      <strong>Teilen ist freiwillig.</strong> Wenn du Handys koppelst, um
+      Einkaufsliste und Plan mit der Familie zu teilen, werden Liste und Plan in
+      Google Firebase gespeichert, damit jedes gekoppelte Handy sie sieht.
+      Solange du keine gemeinsame Liste anlegst oder ihr beitrittst, verlässt
+      nichts aus Liste oder Plan das Handy.
+    </p>
+    <p>
+      <strong>Die Werbung sammelt etwas.</strong> Die kostenlose Version zeigt
+      Anzeigen von Google AdMob, dessen SDK die Werbe-ID des Geräts liest. Du
+      kannst das einschränken, indem du die Einwilligung widerrufst, oder es mit
+      Planimo Premium abschalten.
+    </p>
+  </div>
+
+  <h3>Was die App auf dem Gerät speichert</h3>
+  <ul>
+    <li>Die Einkaufsliste, feste Listen („Meine Listen“) und Lieblingsprodukte</li>
+    <li>Den Plan: die Personen, die du hinzufügst (ein selbst gewählter Name und
+      eine Farbe), Aktivitäten (Name, Tag, Uhrzeit, Notiz, wer zuständig ist,
+      Erinnerung) und einmalige Änderungen wie „diese Woche abgesagt“</li>
+    <li>Welche Person auf diesem Handy „ich“ bist — diese Wahl wird nie geteilt</li>
+    <li>Einstellungen: Sprache, Dunkelmodus, Wochen- oder Monatsansicht</li>
+    <li>Ob Premium gekauft wurde, und zwei Zähler, nach denen um eine Bewertung
+      gebeten wird</li>
+  </ul>
+  <p>
+    Alles liegt in einer lokalen Datenbank und lokalen Einstellungen. Beim
+    Deinstallieren wird alles gelöscht. Der Produktkatalog ist in die App
+    eingebaut.
+  </p>
+
+  <h3>Gemeinsame Liste und Plan (Google Firebase) — nur nach dem Koppeln</h3>
+  <p>
+    Unter <strong>Einstellungen → Gemeinsame Liste und Plan</strong> kannst du
+    eine gemeinsame Liste anlegen oder ihr mit einem 8-stelligen Code oder
+    QR-Code beitreten. Dann gilt:
+  </p>
+  <ul>
+    <li>Einkaufsliste, „Meine Listen“, die Personen im Plan (Namen und Farben),
+      die Aktivitäten und ihre Änderungen für einzelne Tage werden in
+      <strong>Google Cloud Firestore</strong> (Firebase) gespeichert, Region
+      <code>europe-central2</code> (Warschau, Polen).</li>
+    <li>Das Handy meldet sich <strong>anonym</strong> bei Firebase an: Firebase
+      vergibt eine zufällige Kennung. Wir erfahren weder Namen noch E-Mail noch
+      Telefonnummer. Die Verbindung zu Firebase bedeutet auch, dass Google die
+      IP-Adresse des Handys verarbeitet, wie bei jedem Internetdienst.</li>
+    <li>Nur Handys, die mit dem Code beigetreten sind, können die gemeinsamen
+      Daten lesen oder ändern. Der Code ist die Einladung — gib ihn nur an
+      Personen weiter, die Liste und Plan sehen sollen.</li>
+    <li>Favoriten, die Wahl „Das bin ich“ und deine Einstellungen bleiben auf
+      jedem Handy und werden nicht geteilt.</li>
+  </ul>
+  <p>
+    <strong>Trennen.</strong> „Dieses Handy trennen“ behält eine Kopie von Liste
+    und Plan auf deinem Handy und beendet die Synchronisierung. Die anderen
+    Handys behalten die gemeinsame Kopie. Wenn eine gemeinsame Liste vollständig
+    vom Server gelöscht werden soll, schreib uns (Kontakt unten) und nenne ihren
+    Code.
+  </p>
+  <p>
+    Firebase wird von Google bereitgestellt, das diese Daten in unserem Auftrag
+    verarbeitet:
+    <a href="https://firebase.google.com/support/privacy">Datenschutz und Sicherheit in Firebase</a>.
+  </p>
+
+  <h3>QR-Code-Scanner</h3>
+  <p>
+    Zum Scannen des Kopplungs-QR-Codes wird der Code-Scanner der Google
+    Play-Dienste verwendet. Er läuft in den Google Play-Diensten, die die Kamera
+    steuern; Planimo erhält nur den gelesenen Code und hat keine eigene
+    Kamera-Berechtigung.
+  </p>
+
+  <h3>Erinnerungen</h3>
+  <p>
+    Erinnerungen an Aktivitäten werden auf dem Handy berechnet und über das
+    Android-Wecksystem geplant, ohne Server. Bei einem gemeinsamen Plan
+    berechnet jedes Handy seine eigenen Erinnerungen aus den gemeinsamen
+    Aktivitäten.
+  </p>
+
+  <h3>Werbung (Google AdMob)</h3>
+  <p>
+    Die kostenlose Version zeigt Banner unten in der Einkaufsliste, in „Meine
+    Listen“ und im Planer sowie native Anzeigen zwischen Produkten im Katalog.
+    Ausgeliefert werden sie von <strong>Google AdMob</strong>. Dafür kann das
+    AdMob-SDK erfassen und an Google senden:
+  </p>
+  <ul>
+    <li>die <strong>Werbe-ID</strong> des Geräts (zurücksetzbar, nicht dein
+      Name)</li>
+    <li>den <strong>ungefähren Standort</strong>, den Google aus der IP-Adresse
+      ableitet</li>
+    <li><strong>Interaktionen mit Anzeigen</strong> — dass eine Anzeige gezeigt
+      und ob sie angetippt wurde</li>
+    <li><strong>Diagnosedaten</strong> zu Fehlern des SDK selbst</li>
+  </ul>
+  <p>
+    Die App übergibt dem Werbe-SDK nie deine Liste, deinen Plan, Personen oder
+    Aktivitäten. Google ist für die Werbedaten eigenständig verantwortlich.
+    Seine Richtlinien:
+  </p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites?hl=de">Wie Google Daten von Apps nutzt, die Google-Dienste verwenden</a></li>
+  </ul>
+  <p>
+    <strong>Einwilligung.</strong> Im EWR, im Vereinigten Königreich und in der
+    Schweiz zeigt die App beim ersten Start ein von Google zertifiziertes
+    Einwilligungsformular. Lehnst du personalisierte Werbung ab, siehst du
+    weiterhin Anzeigen, aber nicht personalisierte. Du kannst deine Wahl
+    jederzeit ändern: <strong>Einstellungen → Datenschutz für
+    Werbung</strong>.
+  </p>
+  <p>
+    <strong>Werbe-ID zurücksetzen.</strong> Android erlaubt es, die Werbe-ID
+    zurückzusetzen oder zu löschen: Einstellungen → Datenschutz → Werbung (der
+    genaue Pfad hängt vom Hersteller ab).
+  </p>
+
+  <h3>Planimo Premium (Google Play)</h3>
+  <p>
+    Premium ist ein einmaliger Kauf über <strong>Google Play</strong>: keine
+    Werbung und keine Begrenzung bei „Meine Listen“. Zahlungsdaten sehen wir nie
+    — die App erfährt nur, ob Premium gekauft wurde. Der Kauf ist an dein
+    Google-Konto gebunden und kommt nach einer Neuinstallation zurück. Mit
+    Premium lädt die App keine Werbung und zeigt kein Einwilligungsformular.
+  </p>
+
+  <h3>App bewerten</h3>
+  <p>
+    Gelegentlich kann die App das Bewertungsfenster von Google Play öffnen.
+    Google zeigt es an und verarbeitet die Bewertung; die App sendet nichts und
+    erhält nichts zurück.
+  </p>
+
+  <h3>Berechtigungen und wozu sie dienen</h3>
+  <table>
+    <tr><th>Berechtigung</th><th>Wozu</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>gemeinsame Liste und Plan, Werbung und der Kauf</td></tr>
+    <tr><td><code>AD_ID</code></td><td>erlaubt dem Werbe-SDK, die Werbe-ID zu lesen</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Erinnerungen an Aktivitäten</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Erinnerungen kommen minutengenau statt ein paar Minuten später</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>nach einem Neustart werden die Erinnerungen wieder gestellt</td></tr>
+    <tr><td><code>BILLING</code></td><td>Kauf von Premium über Google Play</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>von Google-Bibliotheken für Hintergrundarbeit hinzugefügt</td></tr>
+  </table>
+  <p>Es gibt keine Berechtigung für Standort, Kontakte, Mikrofon oder Kamera.</p>
+
+  <h3>Keine Analyse, keine Absturzberichte</h3>
+  <p>
+    Außer dem Werbe-SDK und der freiwilligen Synchronisierung über Firebase
+    enthält die App weder ein Analyse- noch ein Absturzbericht-SDK. Niemand —
+    auch nicht der Entwickler — erhält Informationen darüber, wie du die App
+    nutzt.
+  </p>
+
+  <h3>Android-Sicherung</h3>
+  <p>
+    Die Android-eigene Sicherung (Einstellungen → Google → Sicherung) kann die
+    Daten dieser App verschlüsselt in <em>dein</em> Google Drive kopieren,
+    zusammen mit anderen Apps. Das ist eine Funktion von Android, kein Versand
+    durch die App: Die Daten landen in deinem eigenen Google-Konto und nur, wenn
+    die Sicherung eingeschaltet ist. Du kannst sie in den Android-Einstellungen
+    ausschalten.
+  </p>
+
+  <h3>Deine Rechte</h3>
+  <p>
+    Die Daten auf deinem Handy hast du selbst in der Hand: Lösche Einträge in
+    der App oder deinstalliere sie. Für die gemeinsame Liste und den Plan in
+    Firebase kannst du Auskunft oder Löschung verlangen — schreib an die Adresse
+    unten und nenne den Code der Liste, denn nur über den Code lässt sie sich
+    finden (wir speichern keine Namen oder E-Mails). Du hast außerdem das Recht,
+    dich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+  </p>
+
+  <h3>Kinder</h3>
+  <p>
+    Planimo richtet sich an Eltern und andere Erwachsene, die die Aktivitäten
+    von Kindern organisieren. Die App richtet sich nicht an Kinder, ist nicht
+    Teil des Programms „Für Familien“ und enthält Werbung.
+  </p>
+
+  <h3>Änderungen</h3>
+  <p>Wenn sich diese Erklärung ändert, ändert sich auch das Datum oben.</p>
+
+  <h3>Kontakt</h3>
+  <p>Dariusz Drozd (ddmobile) — <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+
+  <footer>
+    <a href="../">ddmobile.pl</a> · Planimo — Planer rodzinny / Family Planner / Familienplaner
+  </footer>
+
+</div>
+</body>
+</html>
