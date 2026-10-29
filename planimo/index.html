@@ -1,0 +1,392 @@
+<!doctype html>
+<!--
+  Strona aplikacji Planimo (repo rodzina, pakiet pl.ddmobile.rodzina) — od 29 X 2026.
+    https://ddmobile.pl/planimo/                    ta strona
+    https://ddmobile.pl/planimo/privacy.html        polityka prywatności (EN/PL/DE)
+    https://ddmobile.pl/planimo/delete-data.html    usuwanie danych (link w Play Console)
+
+  29 X 2026 wersja 1.0.0 czeka na sprawdzenie w Google Play, więc zamiast
+  przycisku do sklepu stoi „Coming soon". Po publikacji zamień <span class="store">
+  na link https://play.google.com/store/apps/details?id=pl.ddmobile.rodzina
+  (tak jak przy Cozy Tram, commit 2252d63) i popraw kafelek na stronie głównej.
+
+  Treść po angielsku jak na całej witrynie. Liczby (700+ produktów, 25 kategorii,
+  przypomnienia 15 min – 1 dzień, 2 darmowe „My lists") wzięte z kodu — przy
+  zmianie w aplikacji popraw też tutaj i w docs/sklep-play.md w repo rodzina.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Planimo – Family Planner</title>
+<meta name="description" content="Planimo – Family Planner for Android: who takes the kids to which activity this week, a colour for every person, reminders, and a shared shopping list for the whole family. No account needed.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Planimo – Family Planner">
+<meta property="og:description" content="Who takes the kids, when activities are and what to buy — for the whole family.">
+<meta property="og:image" content="https://ddmobile.pl/planimo/img/feature.jpg">
+
+<link rel="icon" href="img/icon-512.png">
+
+<style>
+  /* Paleta z aplikacji i ikony: niebieskie tło #3B6FB0, żółty ptaszek,
+     jasne tło ekranów jak w motywie aplikacji. */
+  :root {
+    --blue: #3B6FB0;
+    --blue-dark: #2D5A93;
+    --blue-soft: #E3ECF7;
+    --yellow: #F2B84B;
+    --ink: #1B1C18;
+    --paper: #F8F7F2;
+    --surface: #EEEFE7;
+    --muted: #4A5048;
+    --outline: #D2D6CC;
+    --measure: 65ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- nagłówek ---------- */
+
+  header { padding: 28px 0 40px; }
+
+  .home { margin: 0 0 28px; font-size: 15px; }
+  .home a { color: var(--muted); }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand img {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+  }
+
+  .brand h1 {
+    /* Człon po myślniku lżejszy: to podtytuł ze sklepu, nie marka. */
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+  }
+
+  .brand h1 span {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    .brand h1 { font-size: 27px; }
+    .brand img { width: 56px; height: 56px; border-radius: 14px; }
+  }
+
+  .lead {
+    max-width: var(--measure);
+    margin: 28px 0 0;
+    font-size: 21px;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  .store {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 26px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a.store:hover { background: var(--blue-dark); }
+
+  .store-note {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .feature-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 40px 0 0;
+    border-radius: 22px;
+  }
+
+  /* ---------- zrzuty ---------- */
+
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+    margin: 48px 0 8px;
+  }
+
+  .shots figure { margin: 0; }
+
+  .shots img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--outline);
+    border-radius: 18px;
+  }
+
+  .shots figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- funkcje ---------- */
+
+  section { padding: 44px 0; }
+
+  h2 {
+    font-size: 15px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features li {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px 22px;
+    border-left: 6px solid var(--c, var(--blue));
+  }
+
+  /* Kolory osób z aplikacji (PersonColor), jak paski na kafelkach planu. */
+  .features li:nth-child(4n+1) { --c: #3B7BBF; }
+  .features li:nth-child(4n+2) { --c: #D0506E; }
+  .features li:nth-child(4n+3) { --c: #4F9A3C; }
+  .features li:nth-child(4n+4) { --c: #E07B39; }
+
+  .features strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .features span {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* ---------- prywatność ---------- */
+
+  .privacy {
+    background: var(--blue-soft);
+    border-radius: 20px;
+    padding: 28px 28px 24px;
+  }
+
+  .privacy h2 { color: #1f4677; }
+
+  .privacy p {
+    max-width: var(--measure);
+    margin: 0 0 12px;
+  }
+
+  .privacy a { color: var(--blue-dark); }
+
+  /* ---------- stopka ---------- */
+
+  footer {
+    border-top: 1px solid var(--outline);
+    margin-top: 32px;
+    padding: 32px 0 56px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--muted); }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131411;
+      --ink: #E9EAE3;
+      --surface: #22241F;
+      --muted: #BFC4BA;
+      --outline: #3A3D36;
+      --blue-soft: #1B2638;
+    }
+    .privacy h2 { color: #9CC2F2; }
+    .privacy a { color: #9CC2F2; }
+    .store { color: #131411; background: #9CC2F2; }
+    a.store:hover { background: #b8d4f6; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="home"><a href="../">← ddmobile.pl</a></p>
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Planimo app icon">
+      <!-- Pełna nazwa z wpisu w sklepie (en-GB); pod ikoną na telefonie samo „Planimo". -->
+      <div>
+        <h1>Planimo<span> – Family Planner</span></h1>
+        <p>Kids' activities, who takes them, and the shopping list</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Who takes the kids to swimming on Tuesday? Who does the shopping? Planimo
+      keeps the whole family on the same page: every activity shows, in that
+      person's colour, who is in charge — and the shopping list is shared too.
+    </p>
+
+    <span class="store">Coming soon to Google Play</span>
+    <p class="store-note">Free · Android 8.0 or newer · English, Polish, German</p>
+
+    <img class="feature-art" src="img/feature.jpg" width="1024" height="500"
+         alt="Planimo key art: the app icon, the name Planimo and activity tiles in family members' colours">
+
+    <div class="shots">
+      <figure>
+        <img src="img/week.jpg" width="540" height="1200" alt="Week view: swimming with Dad, tennis with Grandma, gymnastics with Mum and Dad, piano lesson with Mum">
+        <figcaption>The week at a glance — each tile in the colour of whoever takes the kids.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/month.jpg" width="540" height="1200" alt="Month view: a calendar with coloured bars under each day">
+        <figcaption>The whole month, with a coloured bar for every activity.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/activity.jpg" width="540" height="1200" alt="Activity editor: name, repeat every week, time, people in charge and a reminder">
+        <figcaption>Who's in charge, how often it repeats and when to remind you.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/filter.jpg" width="540" height="1200" alt="Week view filtered to Dad's activities">
+        <figcaption>Filter by person: only what you are responsible for.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shopping.jpg" width="540" height="1200" alt="Shopping list grouped by supermarket aisle with amounts">
+        <figcaption>A shopping list grouped by aisle, shared with the whole family.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section>
+    <h2>What is inside</h2>
+    <ul class="features">
+      <li>
+        <strong>Who takes the kids</strong>
+        <span>Assign Mum, Dad, Grandma — or several people together. Every
+        person has a colour, so the tile shows at a glance who drives whom.</span>
+      </li>
+      <li>
+        <strong>Once, weekly, monthly, yearly</strong>
+        <span>Add swimming once and it repeats every Tuesday. Plans changed?
+        Swap the person or cancel just one day without touching the series.</span>
+      </li>
+      <li>
+        <strong>Reminders on the right phone</strong>
+        <span>From 15 minutes to a day before — on the phones of the people in
+        charge, not everybody's.</span>
+      </li>
+      <li>
+        <strong>Week and month view</strong>
+        <span>Plan the coming week or look at the whole month, and filter the
+        plan down to a single person.</span>
+      </li>
+      <li>
+        <strong>Shopping list</strong>
+        <span>Over 700 ready-made products in 25 supermarket aisles, added with
+        one tap. Favourites and “My lists” for the regular weekly shop.</span>
+      </li>
+      <li>
+        <strong>Shared with the family</strong>
+        <span>Pair phones with an 8-character code or a QR code. The shopping
+        list and the plan update on every paired phone in real time.</span>
+      </li>
+      <li>
+        <strong>No account, no sign-in</strong>
+        <span>Nothing to register. On its own the app keeps everything on your
+        phone; sharing is optional.</span>
+      </li>
+      <li>
+        <strong>Three languages, dark mode</strong>
+        <span>English, Polish and German — product names included. Light or
+        dark, as you like.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="privacy">
+      <h2>Privacy, without asterisks</h2>
+      <p>
+        Without sharing, your plan, people and shopping list stay on your phone.
+        If you pair phones, the shared list and plan are stored in Google
+        Firebase (Warsaw region) so the family can see them — with an anonymous
+        phone identifier, never your name or e-mail.
+      </p>
+      <p>
+        The internet is otherwise needed only for the ads that pay for the app.
+        Planimo Premium is a one-time purchase that removes them and the limit
+        on “My lists”. No subscription.
+      </p>
+      <p>
+        <a href="privacy.html">Full privacy policy</a> ·
+        <a href="delete-data.html">How to delete your data</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a>
+    </p>
+    <p>
+      <a href="privacy.html">Privacy policy</a> ·
+      <a href="delete-data.html">Delete your data</a>
+    </p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
