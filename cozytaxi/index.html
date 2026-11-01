@@ -1,0 +1,139 @@
+<!doctype html>
+<!--
+  Strona gry Cozy Taxi Simulator (pakiet com.cozy.taxi) — https://ddmobile.pl/cozytaxi/
+  Treść po angielsku, jak wpis w Google Play (cozy-taxi/docs/store-listing.md). Polityka prywatności obok:
+  /cozytaxi/privacy.html (adres wpisany w Play Console). Obrazki: img/ (ikona, grafika 1024 × 500, zrzuty 1920 × 1080
+  z cozy-taxi/build/sklep zmniejszone do 1280 px). Jasna, kremowa kolorystyka jak w grze (wspólne games.css jest
+  ciemne — zmienne nadpisane niżej). Od 1 XI 2026; zanim gra wejdzie do Sklepu, zamiast przycisku stoi „Coming soon"
+  — po publikacji zamień <span class="store"> na link do https://play.google.com/store/apps/details?id=com.cozy.taxi.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cozy Taxi Simulator</title>
+<meta name="description" content="Cozy Taxi Simulator — a relaxing taxi game with no crashes, no timer and no game over: passengers with small wishes, landmarks, rain and snow in 7 cities, and your own garage. Coming soon to Google Play.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cozy Taxi Simulator">
+<meta property="og:description" content="Drive a cozy taxi through 7 cities: passengers, landmarks, rain and snow!">
+<meta property="og:image" content="https://ddmobile.pl/cozytaxi/img/feature.jpg">
+<link rel="icon" href="img/icon-512.png">
+<link rel="stylesheet" href="../games.css">
+<style>
+  :root {
+    --bg: #fbf4ea;
+    --panel: #fffaf3;
+    --panel-2: #f6e9da;
+    --text: #4a3b36;
+    --muted: #76625b;
+    --accent: #b8650f;
+    --accent-ink: #ffffff;
+    --outline: #ead8c6;
+  }
+  .brand h1 { text-transform: none; letter-spacing: 0; }
+  .brand h1 span { color: #e08a1e; }
+  .features li { box-shadow: 0 2px 10px rgba(122, 74, 82, 0.06); }
+  span.store { cursor: default; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="home"><a href="../">← ddmobile.pl</a></p>
+
+  <header class="hero">
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Cozy Taxi Simulator app icon">
+      <div>
+        <h1>Cozy <span>Taxi</span> Simulator</h1>
+        <p>A relaxing taxi ride through pastel cities</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Hop into a little yellow taxi and drive passengers around pastel cities. No crashes, no timer and no game over —
+      just you, your cab, the radio and passengers who need a lift.
+    </p>
+
+    <span class="store">Coming soon to Google Play</span>
+    <p class="store-note">Free · Android</p>
+
+    <img class="feature-art" src="img/feature.jpg" width="1024" height="500"
+         alt="Cozy Taxi Simulator key art: a yellow taxi on a street between cherry trees and pastel houses">
+  </header>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/ride.jpg" width="1280" height="720" loading="lazy" alt="A yellow taxi at a crossroads in an autumn town, with a passenger's wish on a card at the top">
+        <figcaption>Autumn in Kraków: a passenger asks for a detour past the windmill.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/tokyo.jpg" width="1280" height="720" loading="lazy" alt="A taxi turning at a crossing in a town with pink cherry trees">
+        <figcaption>Cherry blossoms in Tokyo — and a scenic route past the torii gate.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/london-rain.jpg" width="1280" height="720" loading="lazy" alt="A taxi on a rainy street between brick houses">
+        <figcaption>Rainy London: more passengers, and a tip for keeping them dry.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/winter.jpg" width="1280" height="720" loading="lazy" alt="A taxi at a crossing in a snowy town with half-timbered houses">
+        <figcaption>A snowy Christmas in Nuremberg, with Santas and a Christmas market.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/crossing.jpg" width="1280" height="720" loading="lazy" alt="A taxi stopped before a zebra crossing while a kitten crosses the street">
+        <figcaption>Stop at the crossing — the kitty says thanks with a coin.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/rome-night.jpg" width="1280" height="720" loading="lazy" alt="A taxi with headlights on at night next to a pizza stall">
+        <figcaption>Rome by night: pizza to go on the way home.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/garage.jpg" width="1280" height="720" loading="lazy" alt="Garage screen with a white taxi and cards of taxis from different countries">
+        <figcaption>Your own garage: cozy taxis from around the world and outfits for your driver.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/cities.jpg" width="1280" height="720" loading="lazy" alt="City selection screen with city cards">
+        <figcaption>Pick a city — new ones open as you complete rides.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>What is inside</h2>
+    <ul class="features">
+      <li><strong>Drive at your own pace</strong>
+        <span>Pick a speed — stop, slow or normal — and the taxi keeps its lane, slows down for corners and waits its turn at junctions. Flick the blinker to choose your turn, and stop by a waving passenger: the taxi pulls up to the curb by itself.</span></li>
+      <li><strong>Every passenger has a story</strong>
+        <span>A quick ride home or the scenic route past a landmark, a lost umbrella or teddy bear to find, shopping, street food, a kitten for the vet — or a date. A smooth ride earns up to 5 stars and a tip.</span></li>
+      <li><strong>A kind driver</strong>
+        <span>Stop at the crossing for grandpa, grandma, kids, dogs, cats and ducklings — kids say thanks with a candy, dogs bring a coin. Fill up at the gas station and don't forget a meal and a coffee for yourself.</span></li>
+      <li><strong>7 cities, each with its own weather</strong>
+        <span>Kraków in golden autumn, sunny San Francisco, Munich with afternoon showers, Tokyo under cherry blossoms, rainy London, Rome and a snowy Christmas Nuremberg. Real street names, day and night.</span></li>
+      <li><strong>Your own garage</strong>
+        <span>Ten cozy taxis inspired by cars from around the world, plus outfits and hats for your driver. Buy them with coins, or take one for a trial game after a short ad.</span></li>
+      <li><strong>Radio on</strong>
+        <span>Lo-fi FM, Ukulele Radio or Bossa Café while you drive.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="note">
+      <h2>Free, with ads</h2>
+      <p>The game is free and shows ads: a full-screen ad about every 2 minutes of driving and optional rewarded videos you choose to watch (trial rides). A one-time Full Version removes all ads and unlocks every city, taxi and outfit.</p>
+      <p>No account needed. Languages: English, Polish, German, Czech, French, Spanish, Portuguese, Italian and Japanese.</p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+    <p><a href="../">All apps</a> · <a href="privacy.html">Privacy policy</a></p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
