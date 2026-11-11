@@ -1,0 +1,159 @@
+<!doctype html>
+<!--
+  Strona gry Crane Shift (pakiet com.ddmobile.craneshift) — https://ddmobile.pl/craneshift/
+  Treść po angielsku, jak wpis w Google Play (crane-construction/docs/store-listing.md, „Crane Shift: Tower Crane Sim").
+  Obok: polityka prywatności /craneshift/privacy.html (adres w Play Console) i warunki korzystania /craneshift/terms.html.
+  Obrazki: img/ (ikona 512 z crane-construction/icon.png, grafika 1024 × 500 z build/sklep/feature_graphic.png,
+  zrzuty pionowe 720 × 1280 z build/sklep/en_* zmniejszone do 540 × 960). Ciemna kolorystyka wspólnego games.css,
+  akcent żółty #F5B800 jak przyciski w grze, pas ostrzegawczy żółto-czarny jak na tablicy z logo.
+  Od 11 XI 2026, z przyciskiem do Google Play (link działa po publikacji aplikacji w Sklepie).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crane Shift: Tower Crane Sim</title>
+<meta name="description" content="Crane Shift: Tower Crane Sim — a realistic tower crane simulator: lift rebar, formwork, concrete, steel and glass, and build 30 construction sites from a garage to a high-rise. Free on Google Play.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crane Shift: Tower Crane Sim">
+<meta property="og:description" content="Run a realistic tower crane and build 30 sites, from a garage to a high-rise. The crew on site turns every load into a real building.">
+<meta property="og:image" content="https://ddmobile.pl/craneshift/img/feature.jpg">
+<link rel="icon" href="img/icon-512.png">
+<link rel="stylesheet" href="../games.css">
+<style>
+  :root {
+    --bg: #14171b;
+    --panel: #1d2126;
+    --panel-2: #23282e;
+    --text: #f2f2ee;
+    --muted: #b4bac1;
+    --accent: #f5b800;
+    --accent-ink: #1d2126;
+    --outline: #343b43;
+  }
+  /* pas ostrzegawczy jak na tablicy z logo gry */
+  .hazard {
+    height: 10px;
+    background: repeating-linear-gradient(-45deg, #f5b800 0 14px, #1d2126 14px 28px);
+  }
+  .brand h1 { letter-spacing: 0.01em; }
+  /* 8 zrzutów: 4 + 4 na komputerze, po 2 w rzędzie na telefonie */
+  .shots { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 760px) { .shots { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+  .sites { columns: 4 9.5em; column-gap: 20px; margin: 0; padding: 0 0 0 1.4em; color: var(--muted); font-size: 15px; }
+  .sites li { break-inside: avoid; padding: 1px 0; }
+  .sites li::marker { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="hazard" aria-hidden="true"></div>
+<div class="wrap">
+
+  <p class="home"><a href="../">← ddmobile.pl</a></p>
+
+  <header class="hero">
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Crane Shift app icon: a yellow crane hook with a hazard-striped load">
+      <div>
+        <h1>Crane <span>Shift</span></h1>
+        <p>Tower Crane Sim · build 30 sites, from a garage to a high-rise</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Take the controls of a tower crane and raise 30 buildings, one lift at a time.
+      You move the materials and building elements; the crew on site turns them into real buildings,
+      from a small garage to a seven-storey tower.
+    </p>
+
+    <a class="store" href="https://play.google.com/store/apps/details?id=com.ddmobile.craneshift">Get it on Google Play</a>
+    <p class="store-note">Free · Android · No in-app purchases</p>
+
+    <img class="feature-art" src="img/feature.jpg" width="1024" height="500"
+         alt="Crane Shift: a tower crane lowering a glass facade panel onto a brick office building, with apartment blocks around the site">
+  </header>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/pour.jpg" width="540" height="960" loading="lazy" alt="Pouring concrete from the crane bucket into the green zone over the ground floor slab of the corner shop">
+        <figcaption>Pour concrete from the bucket and hold it still.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/truss.jpg" width="540" height="960" loading="lazy" alt="A steel roof truss hanging from the hook over the warehouse columns, next to its glowing target position">
+        <figcaption>Set steel trusses on the warehouse columns.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/mixer.jpg" width="540" height="960" loading="lazy" alt="Lowering a concrete mixer for the crew onto the first floor of the two-storey villa">
+        <figcaption>Deliver a concrete mixer to the crew upstairs.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fill.jpg" width="540" height="960" loading="lazy" alt="The empty concrete bucket under the chute of an orange truck mixer parked by the site">
+        <figcaption>Fill the bucket at the truck mixer.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/glass.jpg" width="540" height="960" loading="lazy" alt="Hanging glass facade panels on the second floor of the office building, 14 metres up">
+        <figcaption>Hang glass facade panels in mid-air.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/tower.jpg" width="540" height="960" loading="lazy" alt="Lifting a concrete mixer to the fourth floor of the office tower with workers on the scaffolding">
+        <figcaption>The higher you go, the stronger the wind.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/finishing.jpg" width="540" height="960" loading="lazy" alt="The finished building with render, windows and doors after the final inspection">
+        <figcaption>After the inspection the finishing goes up.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/sites.jpg" width="540" height="960" loading="lazy" alt="Choosing a construction site: garage, steel carport, bungalow, small water tower, corner shop and more">
+        <figcaption>30 construction sites, unlocked one after another.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it plays</h2>
+    <ul class="features">
+      <li><strong>Real crane controls</strong>
+        <span>Drag your finger and the hook follows: the jib slews and the trolley runs, with real inertia. Hold the big UP and DOWN buttons to work the winch — nothing lowers on its own. Tap 90° to turn the hanging load and use two fingers to rotate and zoom the camera.</span></li>
+      <li><strong>Parts, not blocks</strong>
+        <span>Rebar and mesh, formwork, pallets of blocks, bricks and roof tiles, insulation, a concrete mixer for the crew, steel beams, columns and trusses, timber roof trusses, roof sheets, precast walls, slabs and stairs, window racks, glass facade panels and rooftop units.</span></li>
+      <li><strong>The crew builds it</strong>
+        <span>Bring the load over the glowing zone, let the swing settle, lower it and slack the rope. The workers unhook it and get to work: walls grow from the pallets, formwork from the plywood stack, slabs from fresh concrete poured from the bucket.</span></li>
+      <li><strong>A real challenge</strong>
+        <span>The rope swings like a pendulum and the wind gets stronger with height. Capacity drops as the trolley runs out and the overload limiter stops you. Hit the building and the wall cracks; knock a worker over and you lose one of three helmets. Earn stars for finishing, safe work and beating the time target.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>30 construction sites</h2>
+    <ol class="sites">
+      <li>Garage</li><li>Steel carport</li><li>Bungalow</li><li>Small water tower</li><li>Corner shop</li>
+      <li>Family house</li><li>Precast garages</li><li>Warehouse</li><li>Kindergarten</li><li>Two-storey villa</li>
+      <li>Grain silo</li><li>Fire station</li><li>Clinic</li><li>Office building</li><li>Townhouse</li>
+      <li>Parking deck</li><li>Hotel</li><li>Sports hall</li><li>Library</li><li>Apartment block</li>
+      <li>Hospital wing</li><li>Water tower</li><li>Retail pavilion</li><li>Office tower</li><li>Power plant chimney</li>
+      <li>Terraced houses</li><li>Town hall</li><li>Residential tower</li><li>Bank headquarters</li><li>Panorama Tower</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="note">
+      <h2>Free, with ads</h2>
+      <p>The game is free and has no in-app purchases. A full-screen ad appears only after a finished site — never while you work the crane. All sites unlock one after another for free.</p>
+      <p>No account needed. Progress is saved on your device after every stage, and the game plays offline; the internet is used only for ads.</p>
+      <p>Languages: English, Polish, German, French, Spanish, Portuguese (Brazil), Italian and Turkish.</p>
+      <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+    <p><a href="../">All apps</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
