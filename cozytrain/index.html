@@ -1,0 +1,142 @@
+<!doctype html>
+<!--
+  Strona gry Cozy Train Simulator (pakiet com.cozy.train) — https://ddmobile.pl/cozytrain/
+  Treść po angielsku, jak wpis w Google Play (cozy-delivery/docs/store-listing.md). Polityka prywatności obok:
+  /cozytrain/privacy.html (adres wpisany w Play Console) i warunki korzystania /cozytrain/terms.html.
+  Obrazki: img/ (ikona „Kometka”, grafika 1024 × 500, zrzuty 1920 × 1080 z cozy-delivery/build/sklep/en_* zmniejszone
+  do 1280 px). Jasna, kremowa kolorystyka jak w grze (wspólne games.css jest ciemne — zmienne nadpisane niżej),
+  akcent w barwie logo (koral + mięta).
+  Od 12 XI 2026; gra w teście wewnętrznym — zamiast przycisku stoi „Coming soon". Po publikacji zamień
+  <span class="store"> na link do https://play.google.com/store/apps/details?id=com.cozy.train
+  (i „Coming soon" na stronie głównej).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cozy Train Simulator</title>
+<meta name="description" content="Cozy Train Simulator — a relaxing train game with no crashes and no game over: passengers, freight and crane jobs, 9 regions and 27 routes from town to town, every season and your own engine shed. Coming soon to Google Play.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cozy Train Simulator">
+<meta property="og:description" content="Drive a cozy little train through fields and villages: passengers, freight and big loads with a crane.">
+<meta property="og:image" content="https://ddmobile.pl/cozytrain/img/feature.jpg">
+<link rel="icon" href="img/icon-512.png">
+<link rel="stylesheet" href="../games.css">
+<style>
+  :root {
+    --bg: #fbf4ea;
+    --panel: #fffaf3;
+    --panel-2: #f6e9da;
+    --text: #4a3b36;
+    --muted: #76625b;
+    --accent: #c44a52;
+    --accent-ink: #ffffff;
+    --outline: #ead8c6;
+  }
+  .brand h1 { text-transform: none; letter-spacing: 0; }
+  .brand h1 span { color: #e0656e; }
+  .brand h1 em { font-style: normal; color: #3f9e86; }
+  .features li { box-shadow: 0 2px 10px rgba(122, 74, 82, 0.06); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="home"><a href="../">← ddmobile.pl</a></p>
+
+  <header class="hero">
+    <div class="brand">
+      <img src="img/icon-512.png" alt="Cozy Train Simulator app icon">
+      <div>
+        <h1><span>Cozy Train</span> <em>Simulator</em></h1>
+        <p>A relaxing train ride from town to town</p>
+      </div>
+    </div>
+
+    <p class="lead">
+      Blow the whistle, close the doors and roll gently through fields of wheat, lavender and sunflowers. No crashes,
+      no game over and no timer — just you, a little locomotive and the people and parcels waiting at the next station.
+    </p>
+
+    <span class="store">Coming soon to Google Play</span>
+    <p class="store-note">Free · Android</p>
+
+    <img class="feature-art" src="img/feature.jpg" width="1024" height="500"
+         alt="Cozy Train Simulator key art: a little train by a port with a ship, a crane and canal houses">
+  </header>
+
+  <section>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure>
+        <img src="img/ride.jpg" width="1280" height="720" loading="lazy" alt="A red train with two coaches on a track through a town, with the switch button and the STOP–GO lever">
+        <figcaption>Set the points ahead of the train, pull the lever to STOP and glide up to the platform.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/warehouse.jpg" width="1280" height="720" loading="lazy" alt="Warehouse shelves full of crates with a shopping list of jam, porcelain, juice and hay">
+        <figcaption>At the warehouse, find the crates on the shelves yourself — or let the warehouse keeper load for you.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/switzerland.jpg" width="1280" height="720" loading="lazy" alt="A train on a meadow track next to a tunnel portal in the hills">
+        <figcaption>Switzerland: big routes with two loops, tunnels and junction stations.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/port.jpg" width="1280" height="720" loading="lazy" alt="A freight train in a Dutch port with cranes, containers and a ship in the basin">
+        <figcaption>Dutch ports: ships in the basins, canals off the map and lift bridges for the train.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/winter.jpg" width="1280" height="720" loading="lazy" alt="A train carrying a gondola through a snowy forest at dusk">
+        <figcaption>Every route has its own season — here a Venetian gondola rides through snowy Swiss woods.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/crane.jpg" width="1280" height="720" loading="lazy" alt="A tower crane lifting a gondola from a ship onto a flatcar">
+        <figcaption>Crane jobs: drag the hook, let the magnet grab and set each big load on its glowing spot.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/home.jpg" width="1280" height="720" loading="lazy" alt="The driver's cozy room with a bed, sofa, kitchen and the driver in uniform">
+        <figcaption>After your shift, furnish the driver's home — the driver walks around, listens to records and naps.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shed.jpg" width="1280" height="720" loading="lazy" alt="A streamlined red locomotive in a wooden engine shed">
+        <figcaption>Your engine shed: wash the train, pet the kitten and puppy, and pick the next route.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>What is inside</h2>
+    <ul class="features">
+      <li><strong>Passengers, freight and crane jobs</strong>
+        <span>Every route has its own task. Passengers wear the color and shape of their station; freight is stacked on the flatcars by hand; big loads — a tulip container, a fishing boat, a combine harvester, a giant teddy bear — go on with a tower crane.</span></li>
+      <li><strong>Gentle driving</strong>
+        <span>Set the points and pick the right track to every station. Brake too hard and the driver's tea spills. On the next track other trains roll out of tunnels and their drivers wave to you.</span></li>
+      <li><strong>9 regions, 27 routes</strong>
+        <span>Masuria, Bavaria, the Netherlands, Tuscany, Provence, Portugal, New England, Japan and Switzerland — little towns on both sides of the track and real station names in every region.</span></li>
+      <li><strong>A lively, cozy world</strong>
+        <span>A combine harvester cuts the wheat, sheep graze on the tracks, kids run with kites, geese fly over the fields and lanterns rise at dusk. Spring, summer, autumn or winter, from sunrise to the evening lamps.</span></li>
+      <li><strong>Your engine shed and home</strong>
+        <span>Seven locomotives, six cute animal themes, paint, wagon decorations, the driver's hat, a cab pet, upgrades and twelve horns — and a home to furnish after your shift.</span></li>
+      <li><strong>No timer, just rides</strong>
+        <span>Every ride pays right away: the fare for the distance plus a tip for a gentle ride. Every ride brings new routes closer. Easy driving mode and a short tutorial help new drivers.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="note">
+      <h2>Free, with ads</h2>
+      <p>The game is free and shows ads: a short full-screen ad roughly every minute and a half, always while the train is stopped, and optional rewarded videos you choose to watch (double coins). A one-time Full Version removes all ads, opens every route and unlocks the whole engine shed shop.</p>
+      <p>No account needed. Languages: English, Polish, German, Czech, French, Spanish, Portuguese, Italian and Japanese.</p>
+      <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Dariusz Drozd</strong><br>
+      Contact: <a href="mailto:darekddev@gmail.com">darekddev@gmail.com</a></p>
+    <p><a href="../">All apps</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+
+</div>
+</body>
+</html>
